@@ -8,6 +8,7 @@ import {
   LocationIcon,
   CakeIcon,
   Followage,
+  EditButton,
 } from './styles';
 
 function ProfilePage() {
@@ -18,7 +19,7 @@ function ProfilePage() {
       </Banner>
 
       <ProfileData>
-        {/* <EditButton outlined>Editar Perfil</EditButton> */}
+        <EditButton outlined text="Editar Perfil" />
 
         <h1>Wendres Lucas</h1>
         <h2>@wendreslucas</h2>
