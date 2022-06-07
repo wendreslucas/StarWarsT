@@ -1,6 +1,16 @@
 import React from 'react';
 
-import { Container, Header, BackIcon, ProfileInfo } from './styles';
+import {
+  Container,
+  Header,
+  BackIcon,
+  ProfileInfo,
+  BottomMenu,
+  HomeIcon,
+  SearchIcon,
+  BellIcon,
+  EmailIcon,
+} from './styles';
 
 function Main() {
   return (
@@ -14,12 +24,13 @@ function Main() {
           <span> 1234 Posts</span>
         </ProfileInfo>
       </Header>
-      {/* <ProfilePage/>
-    <BottomMenu>
-      <HomeIcon/>
-      <BellIcon/>
-      <EmailIcon/>
-    </BottomMenu> */}
+      {/* <ProfilePage/> */}
+      <BottomMenu>
+        <HomeIcon />
+        <SearchIcon />
+        <BellIcon />
+        <EmailIcon />
+      </BottomMenu>
     </Container>
   );
 }
