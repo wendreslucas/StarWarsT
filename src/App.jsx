@@ -1,9 +1,9 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { GlobalStyle } from './ui/GlobalStyle'
-import { Root } from './pages/Root'
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { GlobalStyle } from './styles/GlobalStyle';
+import { Root } from './pages/Root';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Root />
       <ToastContainer />
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
