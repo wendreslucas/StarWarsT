@@ -19,7 +19,7 @@ function ProfilePage() {
       </Banner>
 
       <ProfileData>
-        <EditButton outlined text="Editar Perfil" />
+        <EditButton outlined>Editar Perfil</EditButton>
 
         <h1>Wendres Lucas</h1>
         <h2>@wendreslucas</h2>

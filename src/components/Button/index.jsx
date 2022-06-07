@@ -1,9 +1,23 @@
-import React from 'react';
-import { StyleButton } from './styles';
+import styled from 'styled-components';
 
-function Button(props) {
-  const { outlined, text } = props;
-  return <StyleButton outlined={outlined}>{text}</StyleButton>;
-}
+export const Button = styled.button`
+  background: ${(props) => (props.outlined ? 'transparent' : 'var(--twitter)')};
+  color: ${(props) => (props.outlined ? 'var(--twitter)' : 'var(--white)')};
+  border: ${(props) => (props.outlined ? '1px solid var(--twitter)' : 'none')};
 
-export default Button;
+  padding: 16px;
+  border-radius: 25px;
+
+  cursor: pointer;
+  outline: 0;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  &:hover {
+    background: ${(props) =>
+      props.outlined
+        ? 'var(--twitter-dark-hover)'
+        : 'var(--twitter-light-hover)'};
+  }
+`;
