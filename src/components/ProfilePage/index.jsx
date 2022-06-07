@@ -10,6 +10,7 @@ import {
   Followage,
   EditButton,
 } from './styles';
+import Feed from '../Feed';
 
 function ProfilePage() {
   return (
@@ -47,6 +48,7 @@ function ProfilePage() {
           </span>
         </Followage>
       </ProfileData>
+      <Feed />
     </Container>
   );
 }
