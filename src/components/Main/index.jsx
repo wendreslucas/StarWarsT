@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ProfilePage from '../ProfilePage';
 import {
   Container,
   Header,
@@ -24,7 +24,7 @@ function Main() {
           <span> 1234 Posts</span>
         </ProfileInfo>
       </Header>
-      {/* <ProfilePage/> */}
+      <ProfilePage />
       <BottomMenu>
         <HomeIcon />
         <SearchIcon />
