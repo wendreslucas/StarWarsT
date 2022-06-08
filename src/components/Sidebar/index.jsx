@@ -1,4 +1,5 @@
 import React from 'react';
+import List from '../List';
 
 import {
   Container,
@@ -17,7 +18,10 @@ function Sidebar() {
       </SearchWrapper>
 
       <Body>
-        <p>{'Lorem ipsum dolor sit amet.'.repeat(50)}</p>
+        <List
+          title="Talvez você curta"
+          elements={[<h1>Teste</h1>, <h1>Teste</h1>, <h1>Teste</h1>]}
+        />
       </Body>
     </Container>
   );
