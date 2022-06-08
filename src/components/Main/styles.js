@@ -38,6 +38,7 @@ export const Header = styled.div`
 
     outline: 0;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
 
     &:hover {
       background: var(--twitter-dark-hover);
@@ -47,8 +48,13 @@ export const Header = styled.div`
 export const BackIcon = styled(ArrowLeft)`
   width: 24px;
   height: 24px;
+  transition: ease-in-out 0.2s;
 
-  fill: var(--twitter);
+  &:hover {
+    > path {
+      color: var(--twitter);
+    }
+  }
 `;
 export const ProfileInfo = styled.div`
   margin-left: 17px;
@@ -88,8 +94,8 @@ export const BottomMenu = styled.div`
 const iconCSS = css`
   width: 31px;
   height: 31px;
-
   cursor: pointer;
+  transition: ease-in-out 0.2s;
 
   fill: var(--gray);
   &:hover,

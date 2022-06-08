@@ -96,14 +96,14 @@ export const MenuButton = styled.button`
 
   &:hover {
     background: var(--twitter-dark-hover);
+    color: var(--twitter);
   }
 
   &:hover,
   &.active {
     span,
-    svg {
+    svg path {
       color: var(--twitter);
-      fill: var(--twitter);
     }
   }
 `;
@@ -112,8 +112,6 @@ const iconCss = css`
   flex-shrink: 0;
   width: 30px;
   height: 30px;
-
-  color: var(--white);
 `;
 
 export const HomeIcon = styled(Home)`
