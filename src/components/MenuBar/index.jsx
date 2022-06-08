@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import {
   Container,
   Topside,
-  Logo,
+  // Logo,
   MenuButton,
   HomeIcon,
   BellIcon,
@@ -21,7 +21,7 @@ function MenuBar() {
   return (
     <Container>
       <Topside>
-        <Logo />
+        {/* <Logo /> */}
         <MenuButton>
           <HomeIcon />
           <span>Página Inicial</span>

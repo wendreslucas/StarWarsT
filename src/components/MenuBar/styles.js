@@ -6,7 +6,6 @@ import {
   FavoriteBorder,
   Person,
   ExitToApp,
-  Rocketseat,
 } from '../../styles/Icons';
 
 export const Container = styled.div`
@@ -35,16 +34,16 @@ export const Topside = styled.div`
   }
 `;
 
-export const Logo = styled(Rocketseat)`
-  width: 41px;
-  height: 41px;
+// export const Logo = styled(Rocketseat)`
+//   width: 41px;
+//   height: 41px;
 
-  > path {
-    fill: var(--twitter);
-  }
+//   > path {
+//     fill: var(--twitter);
+//   }
 
-  margin-bottom: 20px;
-`;
+//   margin-bottom: 20px;
+// `;
 
 export const MenuButton = styled.button`
   display: flex;
@@ -113,6 +112,7 @@ const iconCss = css`
   flex-shrink: 0;
   width: 30px;
   height: 30px;
+
   color: var(--white);
 `;
 
