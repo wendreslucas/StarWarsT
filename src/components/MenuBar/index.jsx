@@ -11,6 +11,10 @@ import {
   EmailIcon,
   FavoriteIcon,
   ProfileIcon,
+  Botside,
+  Avatar,
+  ProfileData,
+  ExitIcon,
 } from './styles';
 
 function MenuBar() {
@@ -42,6 +46,14 @@ function MenuBar() {
           <span>Tweetar</span>
         </Button>
       </Topside>
+      <Botside>
+        <Avatar />
+        <ProfileData>
+          <strong>Wendres Lucas</strong>
+          <span>@wendreslucas</span>
+        </ProfileData>
+        <ExitIcon />
+      </Botside>
     </Container>
   );
 }
