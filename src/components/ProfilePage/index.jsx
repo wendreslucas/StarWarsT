@@ -44,7 +44,7 @@ function ProfilePage() {
             seguindo <strong>100</strong>
           </span>
           <span>
-            <strong>672 </strong> segudores
+            <strong>672 </strong> seguidores
           </span>
         </Followage>
       </ProfileData>
