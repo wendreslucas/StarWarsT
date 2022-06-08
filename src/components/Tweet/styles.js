@@ -136,6 +136,22 @@ export const Status = styled.div`
       color: var(--gray);
     }
   }
+
+  &:nth-child(2) {
+    color: var(--retweet);
+
+    > svg path {
+      fill: var(--retweet);
+    }
+  }
+
+  &:nth-child(3) {
+    color: var(--like);
+
+    > svg {
+      fill: var(--like);
+    }
+  }
 `;
 
 const iconCss = css`
