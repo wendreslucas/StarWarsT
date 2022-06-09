@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { swapi } from '../../services/api';
 
 import {
@@ -34,7 +34,7 @@ function Film() {
         <Avatar />
         <Content>
           {movies?.map((movie, index) => (
-            <div key={movie.index}>
+            <div key={index}>
               <Header>
                 <strong>{movie.title}</strong>
                 <span>{movie.director}</span>
