@@ -31,7 +31,7 @@ function ProfilePage() {
       </Banner>
 
       <ProfileData>
-        <EditButton outlined>Editar Perfil</EditButton>
+        {/* <EditButton outlined>Editar Perfil</EditButton> */}
 
         <h1>{user.name}</h1>
         <h2>@{user.twitter_username}</h2>
