@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { MenuContext } from '../../contexts';
+import { MenuContext } from '../../contexts/MenuContext';
 import { git } from '../../services/api';
 
 import {

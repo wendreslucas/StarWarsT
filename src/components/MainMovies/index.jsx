@@ -12,7 +12,7 @@ import {
   EmailIcon,
 } from './styles';
 
-function Main() {
+function MainMovies() {
   return (
     <Container>
       {/* <Header>
@@ -35,4 +35,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default MainMovies;

@@ -15,10 +15,10 @@ import {
 function Sidebar() {
   return (
     <Container>
-      <SearchWrapper>
+      {/* <SearchWrapper>
         <SearchInput placeholder="Buscar" />
         <SearchIcon />
-      </SearchWrapper>
+      </SearchWrapper> */}
 
       <StickyBox>
         <Body>

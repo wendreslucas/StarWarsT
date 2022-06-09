@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Chat, Retweet, Favorite } from '../../styles/Icons';
+import { Search } from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -32,7 +33,7 @@ export const Body = styled.div`
   position: relative;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: 49px;
   height: 49px;
   border-radius: 50%;
@@ -86,9 +87,9 @@ export const Description = styled.p`
   margin-top: 4px;
 `;
 
-export const ImageContent = styled.div`
+export const ImageContent = styled.img`
   margin-top: 12px;
-  width: 100%;
+  width: 50%;
   height: min(285px, max(175px, 41vw));
   background: var(--outline);
   border-radius: 14px;
@@ -167,4 +168,55 @@ export const RetweetIcon = styled(Retweet)`
 `;
 export const LikeIcon = styled(Favorite)`
   ${iconCss}
+`;
+
+export const SearchWrapper = styled.div`
+  padding: 10px 24px;
+  width: min(399px, 100%);
+  /* position: fixed; */
+
+  top: 0;
+  z-index: 2;
+  /* background: var(--primary); */
+
+  max-height: 57px;
+`;
+
+export const SearchInput = styled.input`
+  width: 100%;
+  height: 39px;
+  font-size: 14px;
+  padding: 0 10px 0 52px;
+  border-radius: 19.5px;
+  background: var(--search);
+
+  &::placeholder {
+    color: var(--gray);
+  }
+
+  ~ svg {
+    position: relative;
+    top: -33px;
+    left: 15px;
+    z-index: 1;
+
+    transition: 180ms ease-in-out;
+  }
+
+  outline: 0;
+
+  &:focus {
+    border: 1px solid var(--twitter);
+
+    ~ svg {
+      fill: var(--twitter);
+    }
+  }
+`;
+
+export const SearchIcon = styled(Search)`
+  width: 27px;
+  height: 27px;
+
+  fill: var(--gray);
 `;

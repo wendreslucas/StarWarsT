@@ -1,5 +1,6 @@
 import React from 'react';
-import PersonsPage from '../PersonsPage';
+import PersonPage from '../PersonPage';
+
 import {
   Container,
   BottomMenu,
@@ -12,7 +13,7 @@ import {
 function MainPersonagens() {
   return (
     <Container>
-      <PersonsPage />
+      <PersonPage />
       <BottomMenu>
         <HomeIcon />
         <SearchIcon />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Wrapper } from './styles';
-import Main from '../../components/Main';
+import MainMovies from '../../components/MainMovies';
 import MenuBar from '../../components/MenuBar';
 import Sidebar from '../../components/Sidebar';
 
@@ -9,7 +9,7 @@ function Home() {
     <Container>
       <Wrapper>
         <MenuBar />
-        <Main />
+        <MainMovies />
         <Sidebar />
       </Wrapper>
     </Container>

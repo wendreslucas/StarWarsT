@@ -9,7 +9,7 @@ import {
   LocationIcon,
   Followage,
 } from './styles';
-import Feed from '../Feeds/FeedMovies';
+import FeedMovies from '../Feeds/FeedMovies';
 
 function ProfilePage() {
   const [user, setUser] = useState({});
@@ -55,7 +55,7 @@ function ProfilePage() {
           </span>
         </Followage>
       </ProfileData>
-      <Feed />
+      <FeedMovies />
     </Container>
   );
 }
