@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { git } from '../../services/api';
 
 import {
   Container,
@@ -13,38 +14,44 @@ import {
 import Feed from '../Feed';
 
 function ProfilePage() {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    git.get('/wendreslucas').then((response) => {
+      setUser(response.data);
+      console.log(response.data);
+    });
+  }, []);
+
   return (
     <Container>
       <Banner>
-        <Avatar />
+        <img className="backgroundImg" src="vader.jpg" />
+        <Avatar src={user.avatar_url} />
       </Banner>
 
       <ProfileData>
         <EditButton outlined>Editar Perfil</EditButton>
 
-        <h1>Wendres Lucas</h1>
-        <h2>@wendreslucas</h2>
+        <h1>{user.name}</h1>
+        <h2>@{user.twitter_username}</h2>
 
         <p>
-          Developer at <a href="https://linkedin/me/wendreslucas">@Totale</a>
+          {user.bio} {user.company}
         </p>
 
         <ul>
           <li>
             <LocationIcon />
-            Espirito Santo, Brasil
-          </li>
-          <li>
-            <CakeIcon />
-            Nascido em 29 de abril de 1992
+            {user.location}
           </li>
         </ul>
         <Followage>
           <span>
-            seguindo <strong>100</strong>
+            seguindo <strong>{user.following}</strong>
           </span>
           <span>
-            <strong>672 </strong> seguidores
+            <strong>{user.followers} </strong> seguidores
           </span>
         </Followage>
       </ProfileData>

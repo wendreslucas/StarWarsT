@@ -21,9 +21,13 @@ export const Banner = styled.div`
 
   background: var(--twitter);
   position: relative;
+
+  .backgroundImg {
+    width: 100%;
+  }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vw));
 

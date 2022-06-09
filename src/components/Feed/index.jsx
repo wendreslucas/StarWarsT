@@ -1,21 +1,17 @@
 import React from 'react';
-import Tweet from '../Tweet';
 
 import { Container, Tab, Tweets } from './styles';
+import MovieList from './../MovieList/index';
+import Film from './../Film';
+import Teste from './../Teste/index';
 
 function Feed() {
   return (
     <Container>
-      <Tab>Posts</Tab>
+      <Tab>Movies</Tab>
       <Tweets>
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+        <Film />
+        {/* <Teste /> */}
       </Tweets>
     </Container>
   );

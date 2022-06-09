@@ -15,7 +15,7 @@ import {
 function Main() {
   return (
     <Container>
-      <Header>
+      {/* <Header>
         <button>
           <BackIcon />
         </button>
@@ -23,7 +23,7 @@ function Main() {
           <strong>Wendres Lucas</strong>
           <span> 1234 Posts</span>
         </ProfileInfo>
-      </Header>
+      </Header> */}
       <ProfilePage />
       <BottomMenu>
         <HomeIcon />

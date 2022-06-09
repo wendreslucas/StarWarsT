@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     border: 0;
     background: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
  }
 
   html {
@@ -39,6 +40,7 @@ export const GlobalStyle = createGlobalStyle`
     --twitter: #33A1F2;
     --twitter-dark-hover: #011017;
     --twitter-light-hover: #2C8ED6;
+    --yellow: #FAD120;
   }
 
 `;

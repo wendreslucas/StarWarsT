@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import {
-  Home,
   Notifications,
   Email,
   FavoriteBorder,
@@ -34,16 +33,17 @@ export const Topside = styled.div`
   }
 `;
 
-// export const Logo = styled(Rocketseat)`
-//   width: 41px;
-//   height: 41px;
+export const DivLogo = styled.div`
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-//   > path {
-//     fill: var(--twitter);
-//   }
-
-//   margin-bottom: 20px;
-// `;
+export const Logo = styled.img`
+  margin-bottom: 20px;
+  width: 50%;
+`;
 
 export const MenuButton = styled.button`
   display: flex;
@@ -114,9 +114,9 @@ const iconCss = css`
   height: 30px;
 `;
 
-export const HomeIcon = styled(Home)`
-  ${iconCss}
-`;
+// export const HomeIcon = styled(dashboard)`
+//   ${iconCss}
+// `;
 
 export const BellIcon = styled(Notifications)`
   ${iconCss}
@@ -140,7 +140,7 @@ export const Botside = styled.div`
   align-items: center;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: 39px;
   height: 39px;
   flex-shrink: 0;
