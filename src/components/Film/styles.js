@@ -89,6 +89,8 @@ export const Description = styled.p`
 
 export const ImageContent = styled.img`
   margin-top: 12px;
+  display: flex;
+  align-self: center;
   width: 50%;
   height: min(285px, max(175px, 41vw));
   background: var(--outline);

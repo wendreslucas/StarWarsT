@@ -94,7 +94,7 @@ function Film() {
                     )}.jpg`}
                   />
                   <Header key={index}>
-                    <strong>{movie.title}</strong>
+                    <strong id={getUrlId(movie.url)}>{movie.title}</strong>
                     <span>{movie.director}</span>
                     <Dot />
                     <time>{movie.release_date}</time>
