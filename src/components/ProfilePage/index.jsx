@@ -7,11 +7,9 @@ import {
   Avatar,
   ProfileData,
   LocationIcon,
-  CakeIcon,
   Followage,
-  EditButton,
 } from './styles';
-import Feed from '../Feed';
+import Feed from '../Feeds/FeedMovies';
 
 function ProfilePage() {
   const [user, setUser] = useState({});
@@ -26,13 +24,15 @@ function ProfilePage() {
   return (
     <Container>
       <Banner>
-        <img className="backgroundImg" src="vader.jpg" />
+        <img
+          alt="banner Darth Vader"
+          className="backgroundImg"
+          src="vader.jpg"
+        />
         <Avatar src={user.avatar_url} />
       </Banner>
 
       <ProfileData>
-        {/* <EditButton outlined>Editar Perfil</EditButton> */}
-
         <h1>{user.name}</h1>
         <h2>@{user.twitter_username}</h2>
 

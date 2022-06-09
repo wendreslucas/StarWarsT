@@ -25,7 +25,7 @@ export const Tab = styled.div`
   }
 `;
 
-export const Tweets = styled.div`
+export const Movies = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
