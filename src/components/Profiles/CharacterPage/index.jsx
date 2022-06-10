@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from './styles';
 import FeedPersons from '../../Feeds/FeedPersons';
 
-function Character() {
+function CharacterPage() {
   return (
     <Container>
       <div>
@@ -12,4 +12,4 @@ function Character() {
   );
 }
 
-export default Character;
+export default CharacterPage;

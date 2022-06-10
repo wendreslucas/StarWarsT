@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import MoviePage from '../../Profiles/MoviePage';
 import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,
@@ -15,6 +16,7 @@ function MainMovies() {
     useContext(MenuContext);
   return (
     <Container>
+      <MoviePage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />
         <Persons onClick={handlePersons} />

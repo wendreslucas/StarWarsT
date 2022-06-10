@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Character from '../../Profiles/CharacterPage';
+import CharacterPage from '../../Profiles/CharacterPage';
 import { MenuContext } from '../../../contexts/MenuContext';
 
 import {
@@ -17,7 +17,7 @@ function MainPersons() {
     useContext(MenuContext);
   return (
     <Container>
-      <Character />
+      <CharacterPage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />
         <Persons onClick={handlePersons} />
