@@ -88,25 +88,50 @@ function Starship() {
         </LoadingDiv>
       ) : (
         <div>
-          {starships?.map((starship, index) => {
+          {starships?.map((starship, index) => (
             <Container>
               <Body>
                 <Content>
-                  <Avatar />
+                  <Avatar
+                    key={index}
+                    src={`https://starwars-visualguide.com/assets/img/starships/${getUrlId(
+                      starship.url
+                    )}.jpg`}
+                  />
                   <Header>
                     <strong>{starship.name}</strong>
                     <Dot />
-                    <CardInfo>
-                      <Description>
-                        <ImageContent />
-                      </Description>
-                      <ListInfo></ListInfo>
-                    </CardInfo>
                   </Header>
+                  <CardInfo>
+                    <Description>
+                      <ImageContent
+                        src={`https://starwars-visualguide.com/assets/img/starships/${getUrlId(
+                          starship.url
+                        )}.jpg`}
+                      />
+                    </Description>
+                    <ListInfo>
+                      <p>
+                        Model: <span>{starship.model}</span>
+                      </p>
+
+                      <p>
+                        Passangers: <span>{starship.passengers}</span>
+                      </p>
+
+                      <p>
+                        Length: <span>{starship.length}</span>
+                      </p>
+
+                      <p>
+                        Model <span>{starship.model}</span>
+                      </p>
+                    </ListInfo>
+                  </CardInfo>
                 </Content>
               </Body>
-            </Container>;
-          })}
+            </Container>
+          ))}
         </div>
       )}
     </>
