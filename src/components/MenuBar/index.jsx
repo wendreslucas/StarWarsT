@@ -37,15 +37,15 @@ function MenuBar() {
         </MenuButton>
         <MenuButton onClick={handlePersons}>
           <img alt="icone" src="personagens.svg" />
-          <span>Personagens</span>
+          <span>Characters</span>
         </MenuButton>
         <MenuButton onClick={handlePlanets}>
           <img alt="icone" src="planetas.svg" />
-          <span>Planetas e Luas</span>
+          <span>Planets</span>
         </MenuButton>
         <MenuButton onClick={handleStarships}>
           <img alt="icone" src="nave.svg" />
-          <span>Naves Espaciais</span>
+          <span>Starships</span>
         </MenuButton>
       </Topside>
       <Botside>
