@@ -50,19 +50,6 @@ export const Header = styled.div`
 
   > strong {
     margin-right: 5px;
-    color: var(--yellow);
-  }
-
-  > span,
-  time {
-    color: var(--gray);
-  }
-
-  > strong,
-  span {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
   }
 `;
 
@@ -73,17 +60,21 @@ export const Dot = styled.div`
   margin: 0 10px;
 `;
 
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
+
 export const Description = styled.p`
   font-size: 14px;
   margin-top: 4px;
-  color: var(--white);
 `;
 
 export const ImageContent = styled.img`
   margin-top: 12px;
-  display: flex;
+  width: 100%;
   align-self: center;
-  width: 50%;
   height: min(285px, max(175px, 41vw));
   background: var(--outline);
   border-radius: 14px;
@@ -222,8 +213,29 @@ export const LoadingDiv = styled.div`
   justify-content: center;
 `;
 
-export const CardInfo = styled.div`
+export const List = styled.ul`
+  padding-left: 10px;
   display: flex;
+  width: 90%;
   flex-direction: row;
-  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 3px;
+  align-items: center;
+`;
+
+export const ListInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20px;
+
+  > p {
+    font-size: 14px;
+    font-weight: bold;
+
+    > span {
+      color: var(--yellow);
+      margin-left: 10px;
+    }
+  }
 `;

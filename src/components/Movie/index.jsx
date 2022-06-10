@@ -22,37 +22,32 @@ import {
   SearchWrapper,
   SearchInput,
   SearchIcon,
-  CardInfo,
 } from './styles';
-import { useCharacter } from '../../hooks/useCharacter';
 
-function Planet() {
-  const [planets, setPlanets] = useState([]);
+function Movie() {
+  const [movies, setMovies] = useState([]);
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
-  const { homeWorld, isLoading: isLoadingCharacter } = useCharacter(data);
 
   const getData = useCallback(async () => {
     try {
-      const response = await swapi.get('/planets/');
+      const response = await swapi.get('/films/');
       const returnedData = await response.data;
 
-      setPlanets(returnedData.results);
-      console.log(planets);
+      setMovies(returnedData.results);
     } catch {
+      console.log('Error');
     } finally {
       setIsLoading(false);
-      console.log('fim');
     }
   }, []);
 
   const getFilteredData = useCallback(async () => {
     try {
-      const response = await swapi.get(`planets/?search=${SearchInput}`);
+      const response = await swapi.get(`films/?search=${SearchInput}`);
       const returnedData = response.data;
 
-      setPlanets(returnedData.results);
+      setMovies(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
@@ -63,7 +58,7 @@ function Planet() {
     setInputSearch(e.target.value);
   }
 
-  const debouncedOnChange = debounce(getFilteredData, 500);
+  const debouncedOnChange = debounce(handleInputChange, 500);
 
   useEffect(() => {
     setIsLoading(true);
@@ -92,35 +87,47 @@ function Planet() {
         </LoadingDiv>
       ) : (
         <div>
-          {planets.map((planet, index) => {
+          {movies.map((movie, index) => (
             <Container>
               <Body>
                 <Content>
-                  <Avatar />
-                  <Header key={index} />
-                  <strong id={getUrlId(planet.url)}>{planet.name}</strong>
-                  <Dot />
-                  <span>{planet.climate}</span>
-                  <Dot />
-                  <span>{planet.terrain}</span>
-                  <Header />
-                  <CardInfo>
-                    <Description>
-                      <ImageContent
-                        src={`https://starwars-visualguide.com/assets/img/planets/${getUrlId(
-                          planet.url
-                        )}.jpg`}
-                      />
-                    </Description>
-                  </CardInfo>
+                  <Avatar
+                    src={`https://starwars-visualguide.com/assets/img/films/${getUrlId(
+                      movie.url
+                    )}.jpg`}
+                  />
+                  <Header key={index}>
+                    <strong id={getUrlId(movie.url)}>{movie.title}</strong>
+                    <Dot />
+                    <span>{movie.director}</span>
+                    <Dot />
+                    <time>{movie.release_date}</time>
+                  </Header>
+                  <Description>{movie.opening_crawl}</Description>
+                  <ImageContent
+                    src={`https://starwars-visualguide.com/assets/img/films/${getUrlId(
+                      movie.url
+                    )}.jpg`}
+                  />
+                  <Icons>
+                    <Status>
+                      <CommentIcon />
+                    </Status>
+                    <Status>
+                      <RetweetIcon />
+                    </Status>
+                    <Status>
+                      <LikeIcon />
+                    </Status>
+                  </Icons>
                 </Content>
               </Body>
-            </Container>;
-          })}
+            </Container>
+          ))}
         </div>
       )}
     </>
   );
 }
 
-export default Planet;
+export default Movie;

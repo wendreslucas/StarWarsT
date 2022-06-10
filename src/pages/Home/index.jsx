@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Wrapper } from './styles';
-import MainMovies from '../../components/MainMovies';
+import MainMovies from '../../components/Main/MainMovies';
 import MenuBar from '../../components/MenuBar';
 import Sidebar from '../../components/Sidebar';
 

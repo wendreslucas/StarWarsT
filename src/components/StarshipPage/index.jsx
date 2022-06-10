@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import {
   Container,
   Banner,
@@ -8,9 +9,9 @@ import {
   Followage,
 } from './styles';
 
-import FeedPersons from '../Feeds/FeedPersons';
+import FeedStarship from './../Feeds/FeedStarship/index';
 
-function PersonPage() {
+function StarshipPage() {
   return (
     <Container>
       <Banner>
@@ -39,10 +40,10 @@ function PersonPage() {
         </Followage>
       </ProfileData>
       <div>
-        <FeedPersons />
+        <FeedStarship />
       </div>
     </Container>
   );
 }
 
-export default PersonPage;
+export default StarshipPage;

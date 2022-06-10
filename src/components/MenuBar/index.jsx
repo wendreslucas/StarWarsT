@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 function MenuBar() {
-  const { handleHome, handlePersonagens, handlePlanetas, handleNaves } =
+  const { handleHome, handlePersons, handlePlanets, handleStarships } =
     useContext(MenuContext);
   const [user, setUser] = useState({});
 
@@ -37,17 +37,17 @@ function MenuBar() {
           <span>Dashboard</span>
         </MenuButton>
 
-        <MenuButton onClick={handlePersonagens}>
+        <MenuButton onClick={handlePersons}>
           <img alt="icone" src="personagens.svg" />
           <span>Personagens</span>
         </MenuButton>
 
-        <MenuButton onClick={handlePlanetas}>
+        <MenuButton onClick={handlePlanets}>
           <img alt="icone" src="planetas.svg" />
           <span>Planetas e Luas</span>
         </MenuButton>
 
-        <MenuButton onClick={handleNaves}>
+        <MenuButton onClick={handleStarships}>
           <img alt="icone" src="nave.svg" />
           <span>Naves Espaciais</span>
         </MenuButton>

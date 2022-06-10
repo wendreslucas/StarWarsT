@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Wrapper } from './styles';
 import MenuBar from '../../components/MenuBar';
 import Sidebar from '../../components/Sidebar';
-import MainPersons from '../../components/MainPersons';
+import MainPersons from '../../components/Main/MainPersons';
 
 function Persons() {
   return (

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import ProfilePage from '../ProfilePage';
-import { MenuContext } from '../../contexts/MenuContext';
+import ProfilePage from '../../ProfilePage';
+import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,
   BottomMenu,

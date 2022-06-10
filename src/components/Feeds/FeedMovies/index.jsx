@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { Container, Tab, Movies } from './styles';
-import Film from '../../Film';
+import Movie from '../../Movie';
 
 function FeedMovies() {
   return (
     <Container>
       <Tab>Movies</Tab>
       <Movies>
-        <Film />
+        <Movie />
       </Movies>
     </Container>
   );

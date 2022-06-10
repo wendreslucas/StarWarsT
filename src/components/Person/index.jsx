@@ -61,7 +61,6 @@ function Person() {
       setPersons(returnedData.results);
     } catch {
     } finally {
-      console.log('finally');
       setIsLoading(false);
     }
   }, [SearchInput]);

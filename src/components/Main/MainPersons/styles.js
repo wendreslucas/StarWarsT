@@ -5,7 +5,7 @@ import {
   GiDeathStar,
   RiSpaceShipLine,
   GiExitDoor,
-} from '../../styles/Icons';
+} from '../../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;

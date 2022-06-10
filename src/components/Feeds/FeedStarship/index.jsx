@@ -1,16 +1,17 @@
 import React from 'react';
-import Planet from '../../Planet';
-import { Container, Tab, Movies } from './styles';
 
-function FeedPlanets() {
+import { Container, Tab, Movies } from './styles';
+import Starship from '../../Starship/';
+
+function FeedStarship() {
   return (
     <Container>
-      <Tab>Planets</Tab>
+      <Tab>Persons</Tab>
       <Movies>
-        <Planet />
+        <Starship />
       </Movies>
     </Container>
   );
 }
 
-export default FeedPlanets;
+export default FeedStarship;

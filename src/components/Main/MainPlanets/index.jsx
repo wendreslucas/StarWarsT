@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import PlanetPage from '../PlanetPage';
-import ProfilePage from '../ProfilePage';
-import { MenuContext } from '../../contexts/MenuContext';
+import PlanetPage from '../../PlanetPage';
+import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,
   BottomMenu,
