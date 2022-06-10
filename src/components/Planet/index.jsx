@@ -24,14 +24,12 @@ import {
   SearchIcon,
   CardInfo,
 } from './styles';
-import { useCharacter } from '../../hooks/useCharacter';
 
 function Planet() {
   const [planets, setPlanets] = useState([]);
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState();
-  const { homeWorld, isLoading: isLoadingCharacter } = useCharacter(data);
 
   const getData = useCallback(async () => {
     try {
@@ -63,7 +61,7 @@ function Planet() {
     setInputSearch(e.target.value);
   }
 
-  const debouncedOnChange = debounce(getFilteredData, 500);
+  const debouncedOnChange = debounce(handleInputChange, 500);
 
   useEffect(() => {
     setIsLoading(true);
@@ -92,7 +90,7 @@ function Planet() {
         </LoadingDiv>
       ) : (
         <div>
-          {planets.map((planet, index) => {
+          {/* {planets.map((planet, index) => {
             <Container>
               <Body>
                 <Content>
@@ -116,7 +114,7 @@ function Planet() {
                 </Content>
               </Body>
             </Container>;
-          })}
+          })} */}
         </div>
       )}
     </>

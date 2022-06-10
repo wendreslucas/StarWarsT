@@ -6,7 +6,7 @@ import Starship from '../../Starship/';
 function FeedStarship() {
   return (
     <Container>
-      <Tab>Persons</Tab>
+      <Tab>Starships</Tab>
       <Movies>
         <Starship />
       </Movies>

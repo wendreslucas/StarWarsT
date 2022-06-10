@@ -7,7 +7,7 @@ export function MenuContextProvider({ children }) {
   const navigate = useNavigate();
 
   function handleHome() {
-    navigate('/home');
+    navigate('/');
   }
 
   function handlePersons() {

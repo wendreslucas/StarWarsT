@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Container,
-  Banner,
-  Avatar,
-  ProfileData,
-  LocationIcon,
-  Followage,
-} from './styles';
-import FeedPlanets from '../../Main/MainPlanets';
+import { Container, Banner, ProfileData, Followage } from './styles';
+import FeedPlanets from '../../Feeds/FeedPlanets';
 
 function PlanetPage() {
   return (
