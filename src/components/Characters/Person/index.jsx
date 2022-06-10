@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 import { debounce } from 'lodash';
-import { getUrlId } from '../../utils/getUrlId';
-import { swapi } from '../../services/api';
+import { getUrlId } from '../../../utils/getUrlId';
+import { swapi } from '../../../services/api';
 import { RiLoader2Line } from 'react-icons/ri';
+import { useCharacter } from '../../../hooks/useCharacter';
 
 import {
   Container,
@@ -26,7 +27,6 @@ import {
   CardInfo,
   ListInfo,
 } from './styles';
-import { useCharacter } from '../../hooks/useCharacter';
 
 function Person() {
   const [persons, setPersons] = useState();

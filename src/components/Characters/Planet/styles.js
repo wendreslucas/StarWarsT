@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { Chat, Retweet, Favorite } from '../../styles/Icons';
-import { Search } from '../../styles/Icons';
+import { Chat, Retweet, Favorite } from '../../../styles/Icons';
+import { Search } from '../../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -220,4 +220,10 @@ export const LoadingDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 `;

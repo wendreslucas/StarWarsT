@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { Chat, Retweet, Favorite } from '../../styles/Icons';
-import { Search } from '../../styles/Icons';
+import { Chat, Retweet, Favorite } from '../../../styles/Icons';
+import { Search } from '../../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;

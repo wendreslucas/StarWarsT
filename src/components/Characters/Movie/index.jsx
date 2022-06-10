@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { swapi } from '../../../services/api';
 import { debounce } from 'lodash';
-import { getUrlId } from '../../utils/getUrlId';
-import { swapi } from '../../services/api';
+import { getUrlId } from '../../../utils/getUrlId';
 import { RiLoader2Line } from 'react-icons/ri';
 
 import {
@@ -22,22 +22,21 @@ import {
   SearchWrapper,
   SearchInput,
   SearchIcon,
-  CardInfo,
-  ListInfo,
 } from './styles';
 
-function Starship() {
-  const [starships, setStarships] = useState();
+function Movie() {
+  const [movies, setMovies] = useState([]);
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
     try {
-      const response = await swapi.get('/starships/');
-      const returnedData = response.data;
+      const response = await swapi.get('/films/');
+      const returnedData = await response.data;
 
-      setStarships(returnedData.results);
+      setMovies(returnedData.results);
     } catch {
+      console.log('Error');
     } finally {
       setIsLoading(false);
     }
@@ -45,15 +44,15 @@ function Starship() {
 
   const getFilteredData = useCallback(async () => {
     try {
-      const response = await swapi.get(`/starships/?search=${SearchInput}`);
+      const response = await swapi.get(`films/?search=${SearchInput}`);
       const returnedData = response.data;
 
-      setStarships(returnedData.results);
+      setMovies(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
     }
-  }, [inputSearch]);
+  }, [SearchInput]);
 
   function handleInputChange(e) {
     setInputSearch(e.target.value);
@@ -88,29 +87,47 @@ function Starship() {
         </LoadingDiv>
       ) : (
         <div>
-          {starships?.map((starship, index) => {
+          {movies.map((movie, index) => (
             <Container>
               <Body>
                 <Content>
-                  <Avatar />
-                  <Header>
-                    <strong>{starship.name}</strong>
+                  <Avatar
+                    src={`https://starwars-visualguide.com/assets/img/films/${getUrlId(
+                      movie.url
+                    )}.jpg`}
+                  />
+                  <Header key={index}>
+                    <strong id={getUrlId(movie.url)}>{movie.title}</strong>
                     <Dot />
-                    <CardInfo>
-                      <Description>
-                        <ImageContent />
-                      </Description>
-                      <ListInfo></ListInfo>
-                    </CardInfo>
+                    <span>{movie.director}</span>
+                    <Dot />
+                    <time>{movie.release_date}</time>
                   </Header>
+                  <Description>{movie.opening_crawl}</Description>
+                  <ImageContent
+                    src={`https://starwars-visualguide.com/assets/img/films/${getUrlId(
+                      movie.url
+                    )}.jpg`}
+                  />
+                  <Icons>
+                    <Status>
+                      <CommentIcon />
+                    </Status>
+                    <Status>
+                      <RetweetIcon />
+                    </Status>
+                    <Status>
+                      <LikeIcon />
+                    </Status>
+                  </Icons>
                 </Content>
               </Body>
-            </Container>;
-          })}
+            </Container>
+          ))}
         </div>
       )}
     </>
   );
 }
 
-export default Starship;
+export default Movie;

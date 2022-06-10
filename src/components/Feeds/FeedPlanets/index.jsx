@@ -1,5 +1,5 @@
 import React from 'react';
-import Planet from '../../Planet';
+import Planet from '../../Characters/Planet';
 import { Container, Tab, Movies } from './styles';
 
 function FeedPlanets() {

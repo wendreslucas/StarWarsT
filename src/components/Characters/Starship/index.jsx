@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { swapi } from '../../services/api';
 import { debounce } from 'lodash';
-import { getUrlId } from '../../utils/getUrlId';
+import { getUrlId } from '../../../utils/getUrlId';
+import { swapi } from '../../../services/api';
 import { RiLoader2Line } from 'react-icons/ri';
 
 import {
@@ -23,39 +23,37 @@ import {
   SearchInput,
   SearchIcon,
   CardInfo,
+  ListInfo,
 } from './styles';
 
-function Planet() {
-  const [planets, setPlanets] = useState([]);
+function Starship() {
+  const [starships, setStarships] = useState();
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
 
   const getData = useCallback(async () => {
     try {
-      const response = await swapi.get('/planets/');
-      const returnedData = await response.data;
+      const response = await swapi.get('/starships/');
+      const returnedData = response.data;
 
-      setPlanets(returnedData.results);
-      console.log(planets);
+      setStarships(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
-      console.log('fim');
     }
   }, []);
 
   const getFilteredData = useCallback(async () => {
     try {
-      const response = await swapi.get(`planets/?search=${SearchInput}`);
+      const response = await swapi.get(`/starships/?search=${SearchInput}`);
       const returnedData = response.data;
 
-      setPlanets(returnedData.results);
+      setStarships(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
     }
-  }, [SearchInput]);
+  }, [inputSearch]);
 
   function handleInputChange(e) {
     setInputSearch(e.target.value);
@@ -90,35 +88,29 @@ function Planet() {
         </LoadingDiv>
       ) : (
         <div>
-          {/* {planets.map((planet, index) => {
+          {starships?.map((starship, index) => {
             <Container>
               <Body>
                 <Content>
                   <Avatar />
-                  <Header key={index} />
-                  <strong id={getUrlId(planet.url)}>{planet.name}</strong>
-                  <Dot />
-                  <span>{planet.climate}</span>
-                  <Dot />
-                  <span>{planet.terrain}</span>
-                  <Header />
-                  <CardInfo>
-                    <Description>
-                      <ImageContent
-                        src={`https://starwars-visualguide.com/assets/img/planets/${getUrlId(
-                          planet.url
-                        )}.jpg`}
-                      />
-                    </Description>
-                  </CardInfo>
+                  <Header>
+                    <strong>{starship.name}</strong>
+                    <Dot />
+                    <CardInfo>
+                      <Description>
+                        <ImageContent />
+                      </Description>
+                      <ListInfo></ListInfo>
+                    </CardInfo>
+                  </Header>
                 </Content>
               </Body>
             </Container>;
-          })} */}
+          })}
         </div>
       )}
     </>
   );
 }
 
-export default Planet;
+export default Starship;
