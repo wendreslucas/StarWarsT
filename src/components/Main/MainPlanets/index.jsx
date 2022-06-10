@@ -9,7 +9,7 @@ import {
   StarShip,
   PlanetsIcon,
   ExitDoor,
-} from './styles';
+} from '../styles';
 
 function MainPlanets() {
   const { handleHome, handlePersons, handlePlanets, handleStarships } =

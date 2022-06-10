@@ -5,7 +5,7 @@ import {
   GiDeathStar,
   RiSpaceShipLine,
   GiExitDoor,
-} from '../../../styles/Icons';
+} from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -100,7 +100,7 @@ const iconCSS = css`
   fill: var(--gray);
   &:hover,
   &:active {
-    fill: var(--twitter);
+    fill: var(--yellow);
   }
 `;
 
