@@ -1,32 +1,20 @@
 import React from 'react';
 import StickyBox from 'react-sticky-box';
 import List from '../List';
-import Suggestion from '../Suggestion';
+import GitHub from '../GitHub';
 import News from '../News';
 
-import {
-  Container,
-  SearchWrapper,
-  SearchInput,
-  SearchIcon,
-  Body,
-} from './styles';
+import { Container, Body } from './styles';
+import Linkedin from '../Linkedin';
 
 function Sidebar() {
   return (
     <Container>
-      {/* <SearchWrapper>
-        <SearchInput placeholder="Buscar" />
-        <SearchIcon />
-      </SearchWrapper> */}
-
       <StickyBox>
         <Body>
-          <List title="Sugestões" elements={[<Suggestion />]} />
-          <List
-            title="Talvez você curta"
-            elements={[<News />, <News />, <News />]}
-          />
+          <List title="Sugestões" elements={[<GitHub />]} />
+          <List elements={[<Linkedin />]} />
+          <List title="Trends" elements={[<News />]} />
         </Body>
       </StickyBox>
     </Container>

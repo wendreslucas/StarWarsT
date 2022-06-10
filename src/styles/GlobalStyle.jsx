@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--white);
 
  }
- html, body, #root {
+ html, body,  #root {
    max-width: 100vw;
     max-height: 100vh;
 
@@ -26,6 +26,19 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     background: var(--primary);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--yellow);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+
+    &:hover {
+      background: var(--twitter-dark-hover);
+      opacity: 0.7;
+    }
+
   }
 
   ::-webkit-scrollbar {

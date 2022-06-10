@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const MenuContext = createContext();
@@ -22,6 +22,15 @@ export function MenuContextProvider({ children }) {
     navigate('/starships');
   }
 
+  function handleGitHub() {
+    window.location.href = 'https://github.com/wendreslucas target=_blank';
+  }
+
+  function handleLinkedin() {
+    window.location.href =
+      'https://www.linkedin.com/in/wendres-lucas/ target=_blank';
+  }
+
   return (
     <MenuContext.Provider
       value={{
@@ -29,6 +38,8 @@ export function MenuContextProvider({ children }) {
         handlePersons,
         handlePlanets,
         handleStarships,
+        handleGitHub,
+        handleLinkedin
       }}
     >
       {children}

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { MenuContext } from '../../contexts/MenuContext';
 import { git } from '../../services/api';
 
 import { Container, Avatar, Info, FollowButton } from './styles';
 
-function Suggestion(props) {
+function GitHub() {
+  const { handleGitHub } = useContext(MenuContext);
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -25,9 +27,11 @@ function Suggestion(props) {
           </span>
         </Info>
       </div>
-      <FollowButton outlined>Seguir</FollowButton>
+      <FollowButton onClick={handleGitHub} outlined>
+        Seguir
+      </FollowButton>
     </Container>
   );
 }
 
-export default Suggestion;
+export default GitHub;

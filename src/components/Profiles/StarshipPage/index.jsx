@@ -14,7 +14,7 @@ import FeedStarship from '../../Feeds/FeedStarship';
 function StarshipPage() {
   return (
     <Container>
-      <Banner>
+      {/* <Banner>
         <img
           alt="banner Darth Vader"
           className="backgroundImg"
@@ -38,7 +38,7 @@ function StarshipPage() {
             <strong> </strong>
           </span>
         </Followage>
-      </ProfileData>
+      </ProfileData> */}
       <div>
         <FeedStarship />
       </div>
