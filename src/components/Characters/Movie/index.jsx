@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { swapi } from '../../../services/api';
-import { debounce } from 'lodash';
 import { getUrlId } from '../../../utils/getUrlId';
 import { RiLoader2Line } from 'react-icons/ri';
 
@@ -19,14 +18,10 @@ import {
   CommentIcon,
   RetweetIcon,
   LikeIcon,
-  SearchWrapper,
-  SearchInput,
-  SearchIcon,
 } from './styles';
 
 function Movie() {
   const [movies, setMovies] = useState([]);
-  const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
@@ -42,45 +37,13 @@ function Movie() {
     }
   }, []);
 
-  const getFilteredData = useCallback(async () => {
-    try {
-      const response = await swapi.get(`films/?search=${SearchInput}`);
-      const returnedData = response.data;
-
-      setMovies(returnedData.results);
-    } catch {
-    } finally {
-      setIsLoading(false);
-    }
-  }, [SearchInput]);
-
-  function handleInputChange(e) {
-    setInputSearch(e.target.value);
-  }
-
-  const debouncedOnChange = debounce(handleInputChange, 500);
-
   useEffect(() => {
     setIsLoading(true);
     getData();
   }, [getData]);
 
-  useEffect(() => {
-    setIsLoading(true);
-    getFilteredData();
-  }, [getFilteredData]);
-
   return (
     <>
-      <SearchWrapper>
-        <SearchInput
-          type="text"
-          onChange={(e) => debouncedOnChange(e)}
-          placeholder="Buscar"
-        />
-        <SearchIcon />
-      </SearchWrapper>
-
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />

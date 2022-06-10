@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Item, Title } from './styles';
 
 const List = (props) => {

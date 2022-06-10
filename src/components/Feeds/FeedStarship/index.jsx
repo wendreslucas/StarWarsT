@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Tab, Movies } from './styles';
 import Starship from '../../Characters/Starship/';
 

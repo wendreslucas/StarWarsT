@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container } from './styles';
 
 function News() {
@@ -7,18 +6,26 @@ function News() {
     <Container>
       <span>Assuntos do Momento</span>
       <strong>
-        <a href="https://www.inflor.com.br/" target="_blank">
+        <a href="https://www.inflor.com.br/" target="_blank" rel="noreferrer">
           Inflor
         </a>
       </strong>
       <span>Outros Projetos do Desenvolvedor</span>
       <strong>
-        <a href="https://frontendlogin.vercel.app/" target="_blank">
+        <a
+          href="https://frontendlogin.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Aplicação de Login
         </a>
       </strong>
       <strong>
-        <a href="https://code-post-front-end.vercel.app/" target="_blank">
+        <a
+          href="https://code-post-front-end.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Aplicação de Crud de Posts
         </a>
       </strong>

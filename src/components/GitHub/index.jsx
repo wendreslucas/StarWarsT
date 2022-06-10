@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { MenuContext } from '../../contexts/MenuContext';
 import { git } from '../../services/api';
-
 import { Container, Avatar, Info, FollowButton } from './styles';
 
 function GitHub() {
@@ -21,7 +20,11 @@ function GitHub() {
         <Info>
           <strong>{user.name}</strong>
           <span>
-            <a href="https://github.com/wendreslucas" target="_blank">
+            <a
+              href="https://github.com/wendreslucas"
+              target="_blank"
+              rel="noreferrer"
+            >
               @{user.twitter_username}
             </a>
           </span>

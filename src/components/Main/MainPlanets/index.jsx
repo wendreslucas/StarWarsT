@@ -16,15 +16,6 @@ function MainPlanets() {
     useContext(MenuContext);
   return (
     <Container>
-      {/* <Header>
-        <button>
-          <BackIcon />
-        </button>
-        <ProfileInfo>
-          <strong>Wendres Lucas</strong>
-          <span> 1234 Posts</span>
-        </ProfileInfo>
-      </Header> */}
       <PlanetPage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />

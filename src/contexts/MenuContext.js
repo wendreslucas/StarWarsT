@@ -39,7 +39,7 @@ export function MenuContextProvider({ children }) {
         handlePlanets,
         handleStarships,
         handleGitHub,
-        handleLinkedin
+        handleLinkedin,
       }}
     >
       {children}

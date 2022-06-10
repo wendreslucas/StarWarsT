@@ -1,16 +1,15 @@
 import React from 'react';
-import FeedStarship from '../../Feeds/FeedStarship';
-
 import { Container } from './styles';
+import FeedMovies from '../../Feeds/FeedMovies';
 
-function StarshipPage() {
+function ProfilePage() {
   return (
     <Container>
       <div>
-        <FeedStarship />
+        <FeedMovies />
       </div>
     </Container>
   );
 }
 
-export default StarshipPage;
+export default ProfilePage;

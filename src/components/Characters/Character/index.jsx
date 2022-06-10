@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
-import { debounce } from 'lodash';
 import { getUrlId } from '../../../utils/getUrlId';
 import { swapi } from '../../../services/api';
 import { RiLoader2Line } from 'react-icons/ri';
-import { useCharacter } from '../../../hooks/useCharacter';
 
 import {
   Container,
@@ -21,16 +18,13 @@ import {
   CommentIcon,
   RetweetIcon,
   LikeIcon,
-  SearchWrapper,
-  SearchInput,
-  SearchIcon,
   CardInfo,
   ListInfo,
 } from './styles';
 
 function Character() {
   const [Characters, setCharacters] = useState();
-  const [inputSearch, setInputSearch] = useState('');
+
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
@@ -45,45 +39,13 @@ function Character() {
     }
   }, []);
 
-  const getFilteredData = useCallback(async () => {
-    try {
-      const response = await swapi.get(`/people/?search=${SearchInput}`);
-      const returnedData = response.data;
-
-      setCharacters(returnedData.results);
-    } catch {
-    } finally {
-      setIsLoading(false);
-    }
-  }, [SearchInput]);
-
-  function handleInputChange(e) {
-    setInputSearch(e.target.value);
-  }
-
-  const debouncedOnChange = debounce(handleInputChange, 500);
-
   useEffect(() => {
     setIsLoading(true);
     getData();
   }, [getData]);
 
-  useEffect(() => {
-    setIsLoading(true);
-    getFilteredData();
-  }, [getFilteredData]);
-
   return (
     <>
-      <SearchWrapper>
-        <SearchInput
-          type="text"
-          onChange={(e) => debouncedOnChange(e)}
-          placeholder="Buscar"
-        />
-        <SearchIcon />
-      </SearchWrapper>
-
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />
@@ -146,7 +108,6 @@ function Character() {
                   <Icons>
                     <Status>
                       <CommentIcon />
-                      18
                     </Status>
                     <Status>
                       <RetweetIcon />

@@ -1,16 +1,15 @@
 import React from 'react';
-import FeedStarship from '../../Feeds/FeedStarship';
-
 import { Container } from './styles';
+import FeedPersons from '../../Feeds/FeedPersons';
 
-function StarshipPage() {
+function Character() {
   return (
     <Container>
       <div>
-        <FeedStarship />
+        <FeedPersons />
       </div>
     </Container>
   );
 }
 
-export default StarshipPage;
+export default Character;

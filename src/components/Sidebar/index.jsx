@@ -3,7 +3,6 @@ import StickyBox from 'react-sticky-box';
 import List from '../List';
 import GitHub from '../GitHub';
 import News from '../News';
-
 import { Container, Body } from './styles';
 import Linkedin from '../Linkedin';
 

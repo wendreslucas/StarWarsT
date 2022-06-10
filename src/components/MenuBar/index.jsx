@@ -31,22 +31,18 @@ function MenuBar() {
         <DivLogo>
           <Logo src="logo.png" />
         </DivLogo>
-
         <MenuButton onClick={handleHome}>
           <img alt="icone" src="dashboard.svg" />
           <span>Dashboard</span>
         </MenuButton>
-
         <MenuButton onClick={handlePersons}>
           <img alt="icone" src="personagens.svg" />
           <span>Personagens</span>
         </MenuButton>
-
         <MenuButton onClick={handlePlanets}>
           <img alt="icone" src="planetas.svg" />
           <span>Planetas e Luas</span>
         </MenuButton>
-
         <MenuButton onClick={handleStarships}>
           <img alt="icone" src="nave.svg" />
           <span>Naves Espaciais</span>
