@@ -22,16 +22,16 @@ function ProfilePage() {
 
   return (
     <Container>
-      <Banner>
+      {/* <Banner>
         <img
           alt="banner Darth Vader"
           className="backgroundImg"
           src="vader.jpg"
         />
-        <Avatar src={user.avatar_url} />
-      </Banner>
+        <Avatar src={user.avatar_url} /> 
+      </Banner> */}
 
-      <ProfileData>
+      {/* <ProfileData>
         <h1>{user.name}</h1>
         <h2>@{user.twitter_username}</h2>
 
@@ -53,8 +53,10 @@ function ProfilePage() {
             <strong>{user.followers} </strong> seguidores
           </span>
         </Followage>
-      </ProfileData>
-      <FeedMovies />
+      </ProfileData> */}
+      <div>
+        <FeedMovies />
+      </div>
     </Container>
   );
 }

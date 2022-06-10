@@ -13,7 +13,7 @@ import FeedPersons from '../../Feeds/FeedPersons';
 function PersonPage() {
   return (
     <Container>
-      <Banner>
+      {/* <Banner>
         <img
           alt="banner Darth Vader"
           className="backgroundImg"
@@ -37,7 +37,7 @@ function PersonPage() {
             <strong> </strong>
           </span>
         </Followage>
-      </ProfileData>
+      </ProfileData> */}
       <div>
         <FeedPersons />
       </div>

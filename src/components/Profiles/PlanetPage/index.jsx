@@ -5,14 +5,14 @@ import FeedPlanets from '../../Feeds/FeedPlanets';
 function PlanetPage() {
   return (
     <Container>
-      <Banner>
+      {/* <Banner>
         <img
           alt="banner Darth Vader"
           className="backgroundImg"
           src="vader.jpg"
         />
-      </Banner>
-      <ProfileData>
+      </Banner> */}
+      {/* <ProfileData>
         <h1></h1>
         <h2></h2>
 
@@ -29,7 +29,7 @@ function PlanetPage() {
             <strong> </strong>
           </span>
         </Followage>
-      </ProfileData>
+      </ProfileData> */}
       <div>
         <FeedPlanets />
       </div>
