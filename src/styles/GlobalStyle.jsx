@@ -28,6 +28,31 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--primary);
   }
 
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 40px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    
+    background-color: #8c8080;
+    border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color:var(--yellow);
+    }
+  }
+
+  ::selection {
+  color: var(--yellow);
+  background: #8c8080;
+}
+
   :root {
     --primary: #000;
     --secondary: #15181C;

@@ -9,7 +9,7 @@ import NotFound from './../NotFound/index';
 export const Root = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route exact path="/" element={<Home />} />
       <Route path="/persons" element={<Persons />} />
       <Route path="/planets" element={<Planets />} />
       <Route path="/starships" element={<Starships />} />
