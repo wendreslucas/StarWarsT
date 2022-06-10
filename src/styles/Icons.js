@@ -12,5 +12,6 @@ export { ArrowLeft } from 'styled-icons/heroicons-solid';
 export { Chat } from 'styled-icons/heroicons-outline';
 export { Retweet } from '@styled-icons/fa-solid/Retweet';
 
-export { GiDeathStar } from 'react-icons/gi';
+export { GiDeathStar, GiExitDoor } from 'react-icons/gi';
 export { RiSpaceShipLine } from 'react-icons/ri';
+export { SiDarkreader } from 'react-icons/si';

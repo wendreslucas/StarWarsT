@@ -6,9 +6,10 @@ import {
   Container,
   BottomMenu,
   HomeIcon,
-  SearchIcon,
+  Persons,
   StarShip,
   PlanetsIcon,
+  ExitDoor,
 } from './styles';
 
 function MainPersons() {
@@ -19,9 +20,10 @@ function MainPersons() {
       <PersonPage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />
-        <SearchIcon />
+        <Persons onClick={handlePersons} />
         <StarShip onClick={handleStarships} />
         <PlanetsIcon onClick={handlePlanets} />
+        <ExitDoor />
       </BottomMenu>
     </Container>
   );

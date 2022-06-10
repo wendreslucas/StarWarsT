@@ -1,5 +1,11 @@
 import styled, { css } from 'styled-components';
-import { Home, Search, GiDeathStar, RiSpaceShipLine } from '../../styles/Icons';
+import {
+  Home,
+  SiDarkreader,
+  GiDeathStar,
+  RiSpaceShipLine,
+  GiExitDoor,
+} from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -101,12 +107,16 @@ const iconCSS = css`
 export const HomeIcon = styled(Home)`
   ${iconCSS}
 `;
-export const SearchIcon = styled(Search)`
+export const Persons = styled(SiDarkreader)`
   ${iconCSS}
 `;
 export const StarShip = styled(RiSpaceShipLine)`
   ${iconCSS}
 `;
 export const PlanetsIcon = styled(GiDeathStar)`
+  ${iconCSS}
+`;
+
+export const ExitDoor = styled(GiExitDoor)`
   ${iconCSS}
 `;
