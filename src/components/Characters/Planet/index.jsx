@@ -95,11 +95,12 @@ function Planet() {
               <Body>
                 <Content>
                   <Avatar
+                    key={index}
                     src={`https://starwars-visualguide.com/assets/img/planets/${getUrlId(
                       planet.url
                     )}.jpg`}
                   />
-                  <Header key={index} />
+                  <Header />
                   <strong id={getUrlId(planet.url)}>{planet.name}</strong>
 
                   <Header />
