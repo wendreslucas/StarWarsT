@@ -92,11 +92,13 @@ function Movie() {
               <Body>
                 <Content>
                   <Avatar
+                    key={index}
+                    id={movie.id}
                     src={`https://starwars-visualguide.com/assets/img/films/${getUrlId(
                       movie.url
                     )}.jpg`}
                   />
-                  <Header key={index}>
+                  <Header>
                     <strong id={getUrlId(movie.url)}>{movie.title}</strong>
                     <Dot />
                     <span>{movie.director}</span>

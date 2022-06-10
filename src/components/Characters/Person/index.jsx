@@ -31,14 +31,6 @@ import {
 function Person() {
   const [persons, setPersons] = useState();
   const [inputSearch, setInputSearch] = useState('');
-  const [data, setData] = useState();
-  const {
-    movies,
-    vehicles,
-    starships,
-    homeWorld,
-    isLoading: isLoadingCharacter,
-  } = useCharacter(data);
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
@@ -103,11 +95,13 @@ function Person() {
               <Body>
                 <Content>
                   <Avatar
+                    key={index}
+                    id={person.id}
                     src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
                       person.url
                     )}.jpg`}
                   />
-                  <Header key={index} id={person.id}>
+                  <Header>
                     <strong>{person.name}</strong>
                     <Dot />
                   </Header>

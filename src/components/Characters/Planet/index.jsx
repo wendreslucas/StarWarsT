@@ -23,13 +23,13 @@ import {
   SearchInput,
   SearchIcon,
   CardInfo,
+  ListInfo,
 } from './styles';
 
 function Planet() {
   const [planets, setPlanets] = useState([]);
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [data, setData] = useState();
 
   const getData = useCallback(async () => {
     try {
@@ -90,17 +90,18 @@ function Planet() {
         </LoadingDiv>
       ) : (
         <div>
-          {planets.map((planet, index) => {
+          {planets?.map((planet, index) => (
             <Container>
               <Body>
                 <Content>
-                  <Avatar />
+                  <Avatar
+                    src={`https://starwars-visualguide.com/assets/img/planets/${getUrlId(
+                      planet.url
+                    )}.jpg`}
+                  />
                   <Header key={index} />
                   <strong id={getUrlId(planet.url)}>{planet.name}</strong>
-                  <Dot />
-                  <span>{planet.climate}</span>
-                  <Dot />
-                  <span>{planet.terrain}</span>
+
                   <Header />
                   <CardInfo>
                     <Description>
@@ -110,11 +111,44 @@ function Planet() {
                         )}.jpg`}
                       />
                     </Description>
+                    <ListInfo>
+                      <p>
+                        Climated: <span>{planet.climate}</span>
+                      </p>
+
+                      <p>
+                        Terrain: <span>{planet.terrain}</span>
+                      </p>
+
+                      <p>
+                        Diameter: <span>{planet.diameter} cm</span>
+                      </p>
+
+                      <p>
+                        Population: <span>{planet.population}</span>
+                      </p>
+
+                      <p>
+                        Gravity <span>{planet.gravity}</span>
+                      </p>
+                    </ListInfo>
                   </CardInfo>
+                  <Icons>
+                    <Status>
+                      <CommentIcon />
+                      18
+                    </Status>
+                    <Status>
+                      <RetweetIcon />
+                    </Status>
+                    <Status>
+                      <LikeIcon />
+                    </Status>
+                  </Icons>
                 </Content>
               </Body>
-            </Container>;
-          })}
+            </Container>
+          ))}
         </div>
       )}
     </>
