@@ -32,7 +32,7 @@ function MenuBar() {
           <Logo src="logo.png" />
         </DivLogo>
 
-        <MenuButton onClick={handleHome} className="active">
+        <MenuButton onClick={handleHome}>
           <img alt="icone" src="dashboard.svg" />
           <span>Dashboard</span>
         </MenuButton>

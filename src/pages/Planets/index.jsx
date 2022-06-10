@@ -2,18 +2,18 @@ import React from 'react';
 import { Container, Wrapper } from './styles';
 import MenuBar from '../../components/MenuBar';
 import Sidebar from '../../components/Sidebar';
-import MainPersonagens from '../../components/MainPersonagens';
+import MainPlanets from '../../components/MainPlanets';
 
-function Home() {
+function Planets() {
   return (
     <Container>
       <Wrapper>
         <MenuBar />
-        <MainPersonagens />
+        <MainPlanets />
         <Sidebar />
       </Wrapper>
     </Container>
   );
 }
 
-export default Home;
+export default Planets;

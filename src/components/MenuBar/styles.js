@@ -49,7 +49,7 @@ export const MenuButton = styled.button`
   display: flex;
   align-items: center;
   flex-shrink: 0;
-
+  color: ${(props) => (props.active ? 'var(--yellow)' : 'var(--white)')};
   > span {
     display: none;
   }
@@ -96,14 +96,14 @@ export const MenuButton = styled.button`
 
   &:hover {
     background: var(--twitter-dark-hover);
-    color: var(--twitter);
+    color: var(--yellow);
   }
 
   &:hover,
   &.active {
     span,
     svg path {
-      color: var(--twitter);
+      color: var(--yellow);
     }
   }
 `;

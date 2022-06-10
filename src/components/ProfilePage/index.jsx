@@ -17,7 +17,6 @@ function ProfilePage() {
   useEffect(() => {
     git.get('/wendreslucas').then((response) => {
       setUser(response.data);
-      console.log(response.data);
     });
   }, []);
 

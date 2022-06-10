@@ -10,25 +10,25 @@ export function MenuContextProvider({ children }) {
     navigate('/home');
   }
 
-  function handlePersonagens() {
-    navigate('/personagens');
+  function handlePersons() {
+    navigate('/persons');
   }
 
-  function handlePlanetas() {
-    navigate('/planetas');
+  function handlePlanets() {
+    navigate('/planets');
   }
 
-  function handleNaves() {
-    navigate('/naves');
+  function handleStarships() {
+    navigate('/starships');
   }
 
   return (
     <MenuContext.Provider
       value={{
         handleHome,
-        handlePersonagens,
-        handlePlanetas,
-        handleNaves,
+        handlePersons,
+        handlePlanets,
+        handleStarships,
       }}
     >
       {children}

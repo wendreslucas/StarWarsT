@@ -17,23 +17,13 @@ export const Retweeted = styled.div`
   color: var(--gray);
 `;
 
-export const RocketseatIcon = styled(Retweet)`
-  width: 16px;
-  height: 16px;
-  margin-left: 35px;
-  margin-right: 9px;
-
-  > path {
-    fill: var(--gray);
-  }
-`;
 export const Body = styled.div`
   display: flex;
   margin-top: 3px;
   position: relative;
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: 49px;
   height: 49px;
   border-radius: 50%;
@@ -61,18 +51,6 @@ export const Header = styled.div`
   > strong {
     margin-right: 5px;
   }
-
-  > span,
-  time {
-    color: var(--gray);
-  }
-
-  > strong,
-  span {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
 `;
 
 export const Dot = styled.div`
@@ -82,14 +60,21 @@ export const Dot = styled.div`
   margin: 0 10px;
 `;
 
+export const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
+
 export const Description = styled.p`
   font-size: 14px;
   margin-top: 4px;
 `;
 
-export const ImageContent = styled.div`
+export const ImageContent = styled.img`
   margin-top: 12px;
   width: 100%;
+  align-self: center;
   height: min(285px, max(175px, 41vw));
   background: var(--outline);
   border-radius: 14px;
@@ -206,10 +191,10 @@ export const SearchInput = styled.input`
   outline: 0;
 
   &:focus {
-    border: 1px solid var(--twitter);
+    border: 1px solid var(--yellow);
 
     ~ svg {
-      fill: var(--twitter);
+      fill: var(--yellow);
     }
   }
 `;
@@ -219,4 +204,38 @@ export const SearchIcon = styled(Search)`
   height: 27px;
 
   fill: var(--gray);
+`;
+
+export const LoadingDiv = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const List = styled.ul`
+  padding-left: 10px;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 3px;
+  align-items: center;
+`;
+
+export const ListInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 20px;
+
+  > p {
+    font-size: 14px;
+    font-weight: bold;
+
+    > span {
+      color: var(--yellow);
+      margin-left: 10px;
+    }
+  }
 `;

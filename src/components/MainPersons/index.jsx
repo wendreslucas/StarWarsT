@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import ProfilePage from '../ProfilePage';
+import PersonPage from '../PersonPage';
 import { MenuContext } from '../../contexts/MenuContext';
+
 import {
   Container,
   BottomMenu,
@@ -10,21 +11,12 @@ import {
   PlanetsIcon,
 } from './styles';
 
-function MainMovies() {
+function MainPersons() {
   const { handleHome, handlePersons, handlePlanets, handleStarships } =
     useContext(MenuContext);
   return (
     <Container>
-      {/* <Header>
-        <button>
-          <BackIcon />
-        </button>
-        <ProfileInfo>
-          <strong>Wendres Lucas</strong>
-          <span> 1234 Posts</span>
-        </ProfileInfo>
-      </Header> */}
-      <ProfilePage />
+      <PersonPage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />
         <SearchIcon />
@@ -35,4 +27,4 @@ function MainMovies() {
   );
 }
 
-export default MainMovies;
+export default MainPersons;

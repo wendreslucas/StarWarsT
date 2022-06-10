@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { swapi } from '../../services/api';
 import { debounce } from 'lodash';
 import { getUrlId } from '../../utils/getUrlId';
+import { RiLoader2Line } from 'react-icons/ri';
 
 import {
   Container,
@@ -10,6 +11,7 @@ import {
   Content,
   Header,
   Dot,
+  LoadingDiv,
   Description,
   ImageContent,
   Icons,
@@ -48,7 +50,6 @@ function Film() {
       setMovies(returnedData.results);
     } catch {
     } finally {
-      console.log('finally');
       setIsLoading(false);
     }
   }, [SearchInput]);
@@ -81,7 +82,9 @@ function Film() {
       </SearchWrapper>
 
       {isLoading ? (
-        <div>Carregando...</div>
+        <LoadingDiv>
+          <RiLoader2Line />
+        </LoadingDiv>
       ) : (
         <div>
           {movies.map((movie, index) => (
@@ -95,6 +98,7 @@ function Film() {
                   />
                   <Header key={index}>
                     <strong id={getUrlId(movie.url)}>{movie.title}</strong>
+                    <Dot />
                     <span>{movie.director}</span>
                     <Dot />
                     <time>{movie.release_date}</time>

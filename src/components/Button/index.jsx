@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background: ${(props) => (props.outlined ? 'transparent' : 'var(--twitter)')};
-  color: ${(props) => (props.outlined ? 'var(--twitter)' : 'var(--white)')};
-  border: ${(props) => (props.outlined ? '1px solid var(--twitter)' : 'none')};
+  background: ${(props) => (props.outlined ? 'transparent' : 'var(--yellow)')};
+  color: ${(props) => (props.outlined ? 'var(--yellow)' : 'var(--white)')};
+  border: ${(props) => (props.outlined ? '1px solid var(--yellow)' : 'none')};
 
   padding: 16px;
   border-radius: 25px;

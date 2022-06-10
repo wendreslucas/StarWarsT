@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container, Tab, Movies } from './styles';
-import Person from './../../Person/index';
+import Person from '../../Person/';
 
 function FeedPersons() {
   return (

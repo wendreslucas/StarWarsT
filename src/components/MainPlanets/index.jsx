@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PlanetPage from '../PlanetPage';
 import ProfilePage from '../ProfilePage';
 import { MenuContext } from '../../contexts/MenuContext';
 import {
@@ -10,7 +11,7 @@ import {
   PlanetsIcon,
 } from './styles';
 
-function MainMovies() {
+function MainPlanets() {
   const { handleHome, handlePersons, handlePlanets, handleStarships } =
     useContext(MenuContext);
   return (
@@ -24,7 +25,7 @@ function MainMovies() {
           <span> 1234 Posts</span>
         </ProfileInfo>
       </Header> */}
-      <ProfilePage />
+      <PlanetPage />
       <BottomMenu>
         <HomeIcon onClick={handleHome} />
         <SearchIcon />
@@ -35,4 +36,4 @@ function MainMovies() {
   );
 }
 
-export default MainMovies;
+export default MainPlanets;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Home, Search, Notifications, Email } from '../../styles/Icons';
+import { Home, Search, GiDeathStar, RiSpaceShipLine } from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -104,9 +104,9 @@ export const HomeIcon = styled(Home)`
 export const SearchIcon = styled(Search)`
   ${iconCSS}
 `;
-export const BellIcon = styled(Notifications)`
+export const StarShip = styled(RiSpaceShipLine)`
   ${iconCSS}
 `;
-export const EmailIcon = styled(Email)`
+export const PlanetsIcon = styled(GiDeathStar)`
   ${iconCSS}
 `;

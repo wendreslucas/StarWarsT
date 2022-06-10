@@ -16,8 +16,8 @@ export const Tab = styled.div`
   outline: 0;
   cursor: pointer;
 
-  color: var(--twitter);
-  border-bottom: 2px solid var(--twitter);
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
   transition: ease-in-out 0.2s;
 
   &:hover {
