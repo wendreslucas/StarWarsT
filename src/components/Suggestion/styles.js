@@ -12,7 +12,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
+export const Avatar = styled.img`
   width: 49px;
   height: 49px;
   background: var(--gray);
@@ -31,6 +31,17 @@ export const Info = styled.div`
   > span {
     font-size: 14px;
     color: var(--gray);
+
+    > a {
+      text-decoration: none;
+      color: var(--gray);
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        background: var(--twitter-dark-hover);
+        color: var(--yellow);
+      }
+    }
   }
 `;
 

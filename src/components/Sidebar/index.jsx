@@ -22,14 +22,7 @@ function Sidebar() {
 
       <StickyBox>
         <Body>
-          <List
-            title="Sugestões"
-            elements={[
-              <Suggestion name="Wendres Lucas" nickname="@wendreslucas" />,
-              <Suggestion name="Wendres Lucas" nickname="@wendreslucas" />,
-              <Suggestion name="Wendres Lucas" nickname="@wendreslucas" />,
-            ]}
-          />
+          <List title="Sugestões" elements={[<Suggestion />]} />
           <List
             title="Talvez você curta"
             elements={[<News />, <News />, <News />]}
