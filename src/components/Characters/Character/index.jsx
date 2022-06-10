@@ -28,8 +28,8 @@ import {
   ListInfo,
 } from './styles';
 
-function Person() {
-  const [persons, setPersons] = useState();
+function Character() {
+  const [Characters, setCharacters] = useState();
   const [inputSearch, setInputSearch] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,7 +38,7 @@ function Person() {
       const response = await swapi.get('/people/');
       const returnedData = await response.data;
 
-      setPersons(returnedData.results);
+      setCharacters(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
@@ -50,7 +50,7 @@ function Person() {
       const response = await swapi.get(`/people/?search=${SearchInput}`);
       const returnedData = response.data;
 
-      setPersons(returnedData.results);
+      setCharacters(returnedData.results);
     } catch {
     } finally {
       setIsLoading(false);
@@ -90,56 +90,56 @@ function Person() {
         </LoadingDiv>
       ) : (
         <div>
-          {persons?.map((person, index) => (
+          {Characters?.map((Character, index) => (
             <Container>
               <Body>
                 <Content>
                   <Avatar
                     key={index}
-                    id={person.id}
+                    id={Character.id}
                     src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
-                      person.url
+                      Character.url
                     )}.jpg`}
                   />
                   <Header>
-                    <strong>{person.name}</strong>
+                    <strong>{Character.name}</strong>
                     <Dot />
                   </Header>
                   <CardInfo>
                     <Description>
                       <ImageContent
                         src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
-                          person.url
+                          Character.url
                         )}.jpg`}
                       />
                     </Description>
                     <ListInfo>
                       <p>
-                        Nascimento: <span>{person?.birth_year}</span>
+                        Nascimento: <span>{Character?.birth_year}</span>
                       </p>
 
                       <p>
-                        Gênero: <span>{person?.gender}</span>
+                        Gênero: <span>{Character?.gender}</span>
                       </p>
 
                       <p>
-                        Altura: <span>{person?.height} cm</span>
+                        Altura: <span>{Character?.height} cm</span>
                       </p>
 
                       <p>
-                        Peso: <span>{person?.mass} kg</span>
+                        Peso: <span>{Character?.mass} kg</span>
                       </p>
 
                       <p>
-                        Cor da pele: <span>{person?.skin_color}</span>
+                        Cor da pele: <span>{Character?.skin_color}</span>
                       </p>
 
                       <p>
-                        Cor dos olhos: <span>{person?.eye_color}</span>
+                        Cor dos olhos: <span>{Character?.eye_color}</span>
                       </p>
 
                       <p>
-                        Cor do cabelo: <span>{person?.hair_color}</span>
+                        Cor do cabelo: <span>{Character?.hair_color}</span>
                       </p>
                     </ListInfo>
                   </CardInfo>
@@ -165,4 +165,4 @@ function Person() {
   );
 }
 
-export default Person;
+export default Character;
