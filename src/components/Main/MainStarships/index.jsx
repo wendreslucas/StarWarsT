@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { MenuContext } from '../../../contexts/MenuContext';
-import StarshipPage from '../../StarshipPage';
+import StarshipPage from '../../Profiles/StarshipPage';
 
 import {
   Container,

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { git } from '../../services/api';
+import { git } from '../../../services/api';
 
 import {
   Container,
@@ -9,7 +9,7 @@ import {
   LocationIcon,
   Followage,
 } from './styles';
-import FeedMovies from '../Feeds/FeedMovies';
+import FeedMovies from '../../Feeds/FeedMovies';
 
 function ProfilePage() {
   const [user, setUser] = useState({});

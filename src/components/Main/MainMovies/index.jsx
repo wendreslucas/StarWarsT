@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import ProfilePage from '../../ProfilePage';
+import ProfilePage from '../../Profiles/ProfilePage';
 import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,

@@ -9,7 +9,7 @@ import {
   Followage,
 } from './styles';
 
-import FeedStarship from './../Feeds/FeedStarship/index';
+import FeedStarship from '../../Feeds/FeedStarship';
 
 function StarshipPage() {
   return (

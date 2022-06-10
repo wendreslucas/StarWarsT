@@ -7,8 +7,7 @@ import {
   LocationIcon,
   Followage,
 } from './styles';
-
-import FeedPlanets from './../Feeds/FeedPlanets/index';
+import FeedPlanets from '../../Main/MainPlanets';
 
 function PlanetPage() {
   return (

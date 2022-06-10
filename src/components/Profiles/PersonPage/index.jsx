@@ -8,7 +8,7 @@ import {
   Followage,
 } from './styles';
 
-import FeedPersons from '../Feeds/FeedPersons';
+import FeedPersons from '../../Feeds/FeedPersons';
 
 function PersonPage() {
   return (

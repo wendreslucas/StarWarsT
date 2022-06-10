@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PlanetPage from '../../PlanetPage';
+import PlanetPage from '../../Profiles/PlanetPage';
 import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,
