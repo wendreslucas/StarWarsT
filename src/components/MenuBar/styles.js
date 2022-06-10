@@ -114,10 +114,6 @@ const iconCss = css`
   height: 30px;
 `;
 
-// export const HomeIcon = styled(dashboard)`
-//   ${iconCss}
-// `;
-
 export const BellIcon = styled(Notifications)`
   ${iconCss}
 `;

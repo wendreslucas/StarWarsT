@@ -45,17 +45,7 @@ export const Header = styled.div`
     }
   }
 `;
-// export const BackIcon = styled(ArrowLeft)`
-//   width: 24px;
-//   height: 24px;
-//   transition: ease-in-out 0.2s;
 
-//   &:hover {
-//     > path {
-//       color: var(--twitter);
-//     }
-//   }
-// `;
 export const ProfileInfo = styled.div`
   margin-left: 17px;
 

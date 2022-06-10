@@ -6,7 +6,6 @@ export const Container = styled.div`
   @media (min-width: 1000px) {
     display: flex;
     flex-direction: column;
-
     width: min(399px, 100%);
   }
 `;
