@@ -1,19 +1,12 @@
 import styled, { css } from 'styled-components';
 import { 
   SiDarkreader,
-  GiDeathStar,
-  RiSpaceShipLine
+  GiDeathStar,  
 } from '../../styles/Icons';
 
 import {BsCameraReels} from 'react-icons/bs';
 import {AiOutlineCar} from 'react-icons/ai';
 import {IoRocketOutline} from 'react-icons/io5';
-
-import {
-  MdMovie,
-  MdDirectionsCarFilled,
-} from 'react-icons/md';
-
 
 export const Container = styled.div`
   display: flex;
@@ -86,24 +79,19 @@ export const BottomMenu = styled.div`
 
   @media (min-width: 500px) {
     display: none;
-  }
+  } 
 `;
 
 const iconCSS = css`
   width: 31px;
   height: 31px;
   cursor: pointer;
-  transition: ease-in-out 0.2s;
-
-  fill: var(--gray);
-  &:hover,
-  &:active {
-    fill: var(--yellow);
-  }
+  transition: ease-in-out 0.2s; 
+    
 `;
 
 export const Movie = styled(BsCameraReels)`
-  ${iconCSS}
+  ${iconCSS}  
 `;
 export const Persons = styled(SiDarkreader)`
   ${iconCSS}

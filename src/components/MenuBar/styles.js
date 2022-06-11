@@ -104,6 +104,7 @@ export const MenuButton = styled.button`
     span,
     svg path {
       color: var(--yellow);
+      fill: var(--yellow);
     }
   }
 `;

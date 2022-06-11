@@ -15,7 +15,7 @@ import {
 } from './styles';
 
 function MenuBar() {
-  const { handleHome, handlePersons, handlePlanets, handleStarships, handleVehicles } =
+  const { handleMovies, handlePersons, handlePlanets, handleStarships, handleVehicles } =
     useContext(MenuContext);
   const [user, setUser] = useState({});
 
@@ -31,7 +31,7 @@ function MenuBar() {
         <DivLogo>
           <Logo src="logo.png" />
         </DivLogo>
-        <MenuButton onClick={handleHome}>        
+        <MenuButton onClick={handleMovies}>        
           <img alt="icone" src="movies.svg" />
           <span>Dashboard</span>
         </MenuButton>
