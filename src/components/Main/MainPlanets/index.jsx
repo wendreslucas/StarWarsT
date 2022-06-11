@@ -4,25 +4,25 @@ import { MenuContext } from '../../../contexts/MenuContext';
 import {
   Container,
   BottomMenu,
-  HomeIcon,
+  Movie,
   Persons,
   StarShip,
   PlanetsIcon,
-  ExitDoor,
+  Car
 } from '../styles';
 
 function MainPlanets() {
-  const { handleHome, handlePersons, handlePlanets, handleStarships } =
+  const { handleMovies, handlePersons, handlePlanets, handleStarships, handleVehicles } =
     useContext(MenuContext);
   return (
     <Container>
       <PlanetPage />
       <BottomMenu>
-        <HomeIcon onClick={handleHome} />
+        <Movie onClick={handleMovies} />
         <Persons onClick={handlePersons} />
         <StarShip onClick={handleStarships} />
         <PlanetsIcon onClick={handlePlanets} />
-        <ExitDoor />
+        <Car onClick={handleVehicles}/>
       </BottomMenu>
     </Container>
   );

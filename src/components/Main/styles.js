@@ -1,11 +1,19 @@
 import styled, { css } from 'styled-components';
-import {
-  Home,
+import { 
   SiDarkreader,
   GiDeathStar,
-  RiSpaceShipLine,
-  GiExitDoor,
+  RiSpaceShipLine
 } from '../../styles/Icons';
+
+import {BsCameraReels} from 'react-icons/bs';
+import {AiOutlineCar} from 'react-icons/ai';
+import {IoRocketOutline} from 'react-icons/io5';
+
+import {
+  MdMovie,
+  MdDirectionsCarFilled,
+} from 'react-icons/md';
+
 
 export const Container = styled.div`
   display: flex;
@@ -94,19 +102,19 @@ const iconCSS = css`
   }
 `;
 
-export const HomeIcon = styled(Home)`
+export const Movie = styled(BsCameraReels)`
   ${iconCSS}
 `;
 export const Persons = styled(SiDarkreader)`
   ${iconCSS}
 `;
-export const StarShip = styled(RiSpaceShipLine)`
+export const StarShip = styled(IoRocketOutline)`
   ${iconCSS}
 `;
 export const PlanetsIcon = styled(GiDeathStar)`
   ${iconCSS}
 `;
 
-export const ExitDoor = styled(GiExitDoor)`
+export const Car = styled(AiOutlineCar)`
   ${iconCSS}
 `;

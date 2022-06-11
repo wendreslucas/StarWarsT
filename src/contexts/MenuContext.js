@@ -6,7 +6,7 @@ export const MenuContext = createContext();
 export function MenuContextProvider({ children }) {
   const navigate = useNavigate();
 
-  function handleHome() {
+  function handleMovies() {
     navigate('/');
   }
 
@@ -38,7 +38,7 @@ export function MenuContextProvider({ children }) {
   return (
     <MenuContext.Provider
       value={{
-        handleHome,
+        handleMovies,
         handlePersons,
         handlePlanets,
         handleStarships,
