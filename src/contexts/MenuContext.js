@@ -11,7 +11,7 @@ export function MenuContextProvider({ children }) {
   }
 
   function handlePersons() {
-    navigate('/persons');
+    navigate('/characters');
   }
 
   function handlePlanets() {
