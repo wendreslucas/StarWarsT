@@ -33,7 +33,7 @@ function MenuBar() {
         </DivLogo>
         <MenuButton onClick={handleMovies}>        
           <img alt="icone" src="movies.svg" />
-          <span>Dashboard</span>
+          <span>Movies</span>
         </MenuButton>
         <MenuButton onClick={handlePersons}>
           <img alt="icone" src="personagens.svg" width={'60px'} height={'60px'} />
