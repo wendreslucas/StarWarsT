@@ -22,13 +22,13 @@ export function MenuContextProvider({ children }) {
     navigate('/starships');
   }
 
-  function handleGitHub() {
-    window.location.href = 'https://github.com/wendreslucas target=_blank';
+  function handleGitHub() {   
+    window.open('https://github.com/wendreslucas', '_blank');
   }
 
   function handleLinkedin() {
-    window.location.href =
-      'https://www.linkedin.com/in/wendres-lucas/ target=_blank';
+    window.open('https://www.linkedin.com/in/wendres-lucas/', '_blank');
+     
   }
 
   return (

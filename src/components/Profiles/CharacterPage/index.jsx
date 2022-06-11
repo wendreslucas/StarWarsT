@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container } from './styles';
-import FeedPersons from '../../Feeds/FeedPersons';
+import FeedCharacters from '../../Feeds/FeedCharacters';
 
 function CharacterPage() {
   return (
     <Container>
       <div>
-        <FeedPersons />
+        <FeedCharacters />
       </div>
     </Container>
   );

@@ -23,7 +23,7 @@ import {
 } from './styles';
 
 function Character() {
-  const [Characters, setCharacters] = useState();
+  const [characters, setCharacters] = useState();
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -52,7 +52,7 @@ function Character() {
         </LoadingDiv>
       ) : (
         <div>
-          {Characters?.map((Character, index) => (
+          {characters?.map((character, index) => (
             <Container>
               <Body>
                 <Content>
@@ -60,48 +60,48 @@ function Character() {
                     key={index}
                     id={Character.id}
                     src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
-                      Character.url
+                      character.url
                     )}.jpg`}
                   />
                   <Header>
-                    <strong>{Character.name}</strong>
+                    <strong>{character.name}</strong>
                     <Dot />
                   </Header>
                   <CardInfo>
                     <Description>
                       <ImageContent
                         src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
-                          Character.url
+                          character.url
                         )}.jpg`}
                       />
                     </Description>
                     <ListInfo>
                       <p>
-                        Nascimento: <span>{Character?.birth_year}</span>
+                        Nascimento: <span>{character?.birth_year}</span>
                       </p>
 
                       <p>
-                        Gênero: <span>{Character?.gender}</span>
+                        Gênero: <span>{character?.gender}</span>
                       </p>
 
                       <p>
-                        Altura: <span>{Character?.height} cm</span>
+                        Altura: <span>{character?.height} cm</span>
                       </p>
 
                       <p>
-                        Peso: <span>{Character?.mass} kg</span>
+                        Peso: <span>{character?.mass} kg</span>
                       </p>
 
                       <p>
-                        Cor da pele: <span>{Character?.skin_color}</span>
+                        Cor da pele: <span>{character?.skin_color}</span>
                       </p>
 
                       <p>
-                        Cor dos olhos: <span>{Character?.eye_color}</span>
+                        Cor dos olhos: <span>{character?.eye_color}</span>
                       </p>
 
                       <p>
-                        Cor do cabelo: <span>{Character?.hair_color}</span>
+                        Cor do cabelo: <span>{character?.hair_color}</span>
                       </p>
                     </ListInfo>
                   </CardInfo>

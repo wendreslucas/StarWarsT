@@ -12,7 +12,7 @@ import {
   ExitDoor,
 } from '../styles';
 
-function MainPersons() {
+function MainCharacters() {
   const { handleHome, handlePersons, handlePlanets, handleStarships } =
     useContext(MenuContext);
   return (
@@ -29,4 +29,4 @@ function MainPersons() {
   );
 }
 
-export default MainPersons;
+export default MainCharacters;

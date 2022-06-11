@@ -2,18 +2,18 @@ import React from 'react';
 import { Container, Wrapper } from './styles';
 import MenuBar from '../../components/MenuBar';
 import Sidebar from '../../components/Sidebar';
-import MainPersons from '../../components/Main/MainPersons';
+import MainCharacters from '../../components/Main/MainCharacters';
 
-function Persons() {
+function Characters() {
   return (
     <Container>
       <Wrapper>
         <MenuBar />
-        <MainPersons />
+        <MainCharacters />
         <Sidebar />
       </Wrapper>
     </Container>
   );
 }
 
-export default Persons;
+export default Characters;

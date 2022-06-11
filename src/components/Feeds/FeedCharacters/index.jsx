@@ -1,16 +1,16 @@
 import React from 'react';
 import { Container, Tab, Movies } from './styles';
-import Person from '../../Characters/Character';
+import Character from '../../Characters/Character';
 
-function FeedPersons() {
+function FeedCharacters() {
   return (
     <Container>
-      <Tab>Persons</Tab>
+      <Tab>Characters</Tab>
       <Movies>
-        <Person />
+        <Character />
       </Movies>
     </Container>
   );
 }
 
-export default FeedPersons;
+export default FeedCharacters;
