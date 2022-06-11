@@ -1,16 +1,16 @@
 import React from 'react';
-import Planet from '../../Characters/Planet';
 import { Container, Tab, Movies } from '../styles';
+import Vehicle from '../../Characters/Vehicle';
 
-function FeedPlanets() {
+function FeedVehicles() {
   return (
     <Container>
-      <Tab>Planets</Tab>
+      <Tab>Vehicles</Tab>
       <Movies>
-        <Planet />
+        <Vehicle />
       </Movies>
     </Container>
   );
 }
 
-export default FeedPlanets;
+export default FeedVehicles;

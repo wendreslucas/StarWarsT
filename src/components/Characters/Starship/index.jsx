@@ -88,7 +88,15 @@ function Starship() {
                       </p>
 
                       <p>
-                        Model <span>{starship.model}</span>
+                        Crew: <span>{starship.crew}</span>
+                      </p>
+
+                      <p>
+                        Value: <span>{starship.cost_in_credits}</span>
+                      </p>
+
+                      <p>
+                        Capacity <span>{starship.cargo_capacity}</span>
                       </p>
                     </ListInfo>
                   </CardInfo>

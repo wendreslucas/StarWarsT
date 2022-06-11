@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Tab, Movies } from './styles';
+import { Container, Tab, Movies } from '../styles';
 import Movie from '../../Characters/Movie';
 
 function FeedMovies() {

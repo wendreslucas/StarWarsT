@@ -47,6 +47,10 @@ function MenuBar() {
           <img alt="icone" src="nave.svg" />
           <span>Starships</span>
         </MenuButton>
+        <MenuButton onClick={handleStarships}>
+          <img alt="icone" src="vehicle.svg" width={'60px'} height={'60px'} />
+          <span>Vehicle</span>
+        </MenuButton>
       </Topside>
       <Botside>
         <Avatar src={user.avatar_url} />
