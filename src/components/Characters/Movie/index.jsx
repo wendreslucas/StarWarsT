@@ -33,7 +33,7 @@ function Movie() {
       setMovies(returnedData.results);
     
     } catch {
-      console.log('Error');
+      
     } finally {
       setIsLoading(false);
     }

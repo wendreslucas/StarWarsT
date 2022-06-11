@@ -34,11 +34,11 @@ function Planet() {
       const returnedData = await response.data;
 
       setPlanets(returnedData.results);
-      console.log(returnedData);
+     
     } catch {
     } finally {
       setIsLoading(false);
-      console.log('fim');
+      
     }
   }, [page]);
 

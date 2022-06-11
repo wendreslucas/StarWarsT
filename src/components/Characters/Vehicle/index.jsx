@@ -35,7 +35,7 @@ function Vehicle() {
       const returnedData = await response.data;
 
       setVehicles(returnedData.results);
-      console.log(returnedData);
+     
     } catch{} finally{
       setIsLoading(false);
     }
