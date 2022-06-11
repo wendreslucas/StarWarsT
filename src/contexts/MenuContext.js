@@ -22,6 +22,10 @@ export function MenuContextProvider({ children }) {
     navigate('/starships');
   }
 
+  function handleVehicles() {
+    navigate('/vehicles');
+  }
+
   function handleGitHub() {   
     window.open('https://github.com/wendreslucas', '_blank');
   }
@@ -38,6 +42,7 @@ export function MenuContextProvider({ children }) {
         handlePersons,
         handlePlanets,
         handleStarships,
+        handleVehicles,
         handleGitHub,
         handleLinkedin,
       }}
