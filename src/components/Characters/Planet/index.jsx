@@ -19,24 +19,28 @@ import {
   LikeIcon,
   CardInfo,
   ListInfo,
+  Pagination,
+  PaginationButton
 } from './styles';
 
 function Planet() {
   const [planets, setPlanets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [page, setPage] = useState(2)
 
   const getData = useCallback(async () => {
     try {
-      const response = await swapi.get('/planets/');
+      const response = await swapi.get(`/planets/?page=${page}`);
       const returnedData = await response.data;
 
       setPlanets(returnedData.results);
+      console.log(returnedData);
     } catch {
     } finally {
       setIsLoading(false);
       console.log('fim');
     }
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -45,6 +49,71 @@ function Planet() {
 
   return (
     <>
+  <Pagination>
+  {/* {page === 1 ? (
+    <div/>
+  ) : (
+  )} */}
+  {/* <PaginationButton onClick={() => setPage(page - 1)}>Anterior</PaginationButton> */}
+  {page <= 6 ? (
+    <>
+    <PaginationButton
+      isActive={page ===1}
+      onClick={() => setPage(1)}
+    >
+   1
+      </PaginationButton>
+    <PaginationButton
+      isActive={page ===2}
+      onClick={() => setPage(2)}
+      >
+    2
+    </PaginationButton>
+    <PaginationButton
+      isActive={page ===3}
+      onClick={() => setPage(3)}
+      >
+    3
+    </PaginationButton>
+    <PaginationButton
+      isActive={page ===4}
+      onClick={() => setPage(4)}
+    >
+      4
+    </PaginationButton>
+    <PaginationButton
+      isActive={page ===5}
+      onClick={() => setPage(5)}
+    >
+      5
+    </PaginationButton>
+    <PaginationButton
+      isActive={page ===6}
+      onClick={() => setPage(6)}
+    >
+      6
+    </PaginationButton>
+    </>
+  ) : (
+    <>
+    <PaginationButton onClick={() => setPage(page -1 )}>
+    {page - 1}
+    </PaginationButton>
+    <PaginationButton isActive>{page}</PaginationButton>    
+      {planets?.next && (
+        <PaginationButton onClick={() => setPage(page + 1)}>
+          {page + 1}
+        </PaginationButton>
+      )}   
+    </>    
+  )}
+
+  {!planets?.next ? (
+    <div/>
+  ) : (
+    <PaginationButton onClick={() => setPage(page + 1)}>Próximo</PaginationButton>
+  )}
+</Pagination>
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />

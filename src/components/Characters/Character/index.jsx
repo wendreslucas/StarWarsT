@@ -26,7 +26,7 @@ import {
 
 function Character() {
   const [characters, setCharacters] = useState();
-  const [page, setPage] = useState(2)
+  const [page, setPage] = useState(1)
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
@@ -35,7 +35,7 @@ function Character() {
       const returnedData = await response.data;
 
       setCharacters(returnedData.results);
-      console.log(returnedData);
+     
     } catch {
     } finally {
       setIsLoading(false);

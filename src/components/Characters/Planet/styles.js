@@ -187,3 +187,50 @@ export const ListInfo = styled.div`
     }
   }
 `;
+
+export const Pagination = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > button + button {
+    margin-left: 1rem;
+  }
+`
+
+export const PaginationButton = styled.button`
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--outline);
+  color: var(--gray);
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    background-color: var(--gray);
+    cursor: not-allowed;
+  }
+  svg {
+    text-align: center;
+  }
+
+  ${({ isActive }) => isActive
+    && css`
+      background-color: var(--yellow);
+      border-radius: 50%;
+      font-weight: bold;
+    `}
+`;
+
+PaginationButton.defaultProps = {
+  isActive: false,
+};
