@@ -6,9 +6,9 @@ function News() {
     <Container>
       <span>Assuntos do Momento</span>
       <strong>
-        <a href="https://www.inflor.com.br/" target="_blank" rel="noreferrer">
-          Inflor
-        </a>
+        {/* <a href= target="_blank" rel="noreferrer">
+          
+        </a> */}
       </strong>
       <span>Outros Projetos do Desenvolvedor</span>
       <strong>
