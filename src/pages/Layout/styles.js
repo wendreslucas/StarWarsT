@@ -1,14 +1,25 @@
 import styled, { css } from 'styled-components';
-import { 
-  SiDarkreader,
-  GiDeathStar,  
-} from '../../styles/Icons';
+import { SiDarkreader, GiDeathStar } from '../../styles/Icons';
 
-import {BsCameraReels} from 'react-icons/bs';
-import {AiOutlineCar} from 'react-icons/ai';
-import {IoRocketOutline} from 'react-icons/io5';
+import { BsCameraReels } from 'react-icons/bs';
+import { AiOutlineCar } from 'react-icons/ai';
+import { IoRocketOutline } from 'react-icons/io5';
 
 export const Container = styled.div`
+  background: var(--primary);
+`;
+
+export const Wrapper = styled.div`
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+`;
+
+///////////////////////////////////////////////
+
+export const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -79,19 +90,18 @@ export const BottomMenu = styled.div`
 
   @media (min-width: 500px) {
     display: none;
-  } 
+  }
 `;
 
 const iconCSS = css`
   width: 31px;
   height: 31px;
   cursor: pointer;
-  transition: ease-in-out 0.2s; 
-    
+  transition: ease-in-out 0.2s;
 `;
 
 export const Movie = styled(BsCameraReels)`
-  ${iconCSS}  
+  ${iconCSS}
 `;
 export const Persons = styled(SiDarkreader)`
   ${iconCSS}
@@ -105,4 +115,50 @@ export const PlanetsIcon = styled(GiDeathStar)`
 
 export const Car = styled(AiOutlineCar)`
   ${iconCSS}
+`;
+
+/////////////////////////////////
+
+export const ContainerProfile = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  max-height: 100%;
+  overflow-y: auto;
+
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
+export const ContainerFeed = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Tab = styled.div`
+  text-align: center;
+  margin-top: 10px;
+  padding: 11px 0 15px;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  outline: 0;
+  cursor: pointer;
+
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background: var(--twitter-dark-hover);
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 `;

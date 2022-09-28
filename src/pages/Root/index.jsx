@@ -1,21 +1,22 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../Home';
-import Characters from '../Characters';
-import Planets from '../Planets';
-import Starships from '../Starships';
-import Vehicles from '../Vehicles';
-import NotFound from './../NotFound/index';
+import Layout from '../Layout';
+import Movie from '../../components/Characters/Movie';
+import Character from '../../components/Characters/Character';
+import Planet from '../../components/Characters/Planet';
+import Starship from '../../components/Characters/Starship';
+import Vehicle from '../../components/Characters/Vehicle';
 
 export const Root = () => {
   return (
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/characters" element={<Characters />} />
-      <Route path="/planets" element={<Planets />} />
-      <Route path="/starships" element={<Starships />} />
-      <Route path="vehicles" element={<Vehicles />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<Layout />}>
+        <Route path="/movies" element={<Movie />} />
+        <Route path="/characters" element={<Character />} />
+        <Route path="/planets" element={<Planet />} />
+        <Route path="/starships" element={<Starship />} />
+        <Route path="/vehicles" element={<Vehicle />} />
+      </Route>
     </Routes>
   );
 };

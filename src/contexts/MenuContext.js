@@ -7,7 +7,7 @@ export function MenuContextProvider({ children }) {
   const navigate = useNavigate();
 
   function handleMovies() {
-    navigate('/');
+    navigate('/movies');
   }
 
   function handlePersons() {
@@ -26,13 +26,12 @@ export function MenuContextProvider({ children }) {
     navigate('/vehicles');
   }
 
-  function handleGitHub() {   
+  function handleGitHub() {
     window.open('https://github.com/wendreslucas', '_blank');
   }
 
   function handleLinkedin() {
     window.open('https://www.linkedin.com/in/wendres-lucas/', '_blank');
-     
   }
 
   return (
