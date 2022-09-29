@@ -2,21 +2,17 @@ import styled from 'styled-components';
 import { Search } from 'styled-icons/material-outlined';
 
 export const Container = styled.div`
-  display: none;
-
-  @media (min-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-
-    width: min(399px, 100%);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 10px;
 `;
 
 export const SearchWrapper = styled.div`
   padding: 10px 24px;
   width: min(399px, 100%);
 
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   z-index: 2;
   background: var(--primary);
@@ -61,15 +57,4 @@ export const SearchIcon = styled(Search)`
   height: 27px;
 
   fill: var(--gray);
-`;
-
-export const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 57px 24px 200px;
-  margin-top: 3px;
-
-  > div + div {
-    margin-top: 15px;
-  }
 `;

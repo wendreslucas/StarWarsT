@@ -37,7 +37,6 @@ function Layout() {
         <ContainerMain>
           <ContainerProfile>
             <ContainerFeed>
-              {/* <Tab>FEED</Tab> */}
               <Content>
                 <Outlet />
               </Content>
@@ -51,6 +50,7 @@ function Layout() {
             <Car onClick={handleVehicles} />
           </BottomMenu>
         </ContainerMain>
+
         <Sidebar />
       </Wrapper>
     </Container>

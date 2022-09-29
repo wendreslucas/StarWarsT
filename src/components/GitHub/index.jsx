@@ -11,7 +11,7 @@ function GitHub() {
     git.get('/wendreslucas').then((response) => {
       setUser(response.data);
     });
-  });
+  }, []);
 
   return (
     <Container>
