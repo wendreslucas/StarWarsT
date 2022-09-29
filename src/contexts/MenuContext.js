@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import geraDocumentTitle from '../utils/geraDocumentTitle';
 
 export const MenuContext = createContext();
 
@@ -8,27 +9,27 @@ export function MenuContextProvider({ children }) {
 
   function handleMovies() {
     navigate('/');
-    document.title = 'Star Wars | Movies';
+    geraDocumentTitle('Movie');
   }
 
   function handlePersons() {
     navigate('/characters');
-    document.title = 'Star Wars | Characters';
+    geraDocumentTitle('Characters');
   }
 
   function handlePlanets() {
     navigate('/planets');
-    document.title = 'Star Wars | Planets';
+    geraDocumentTitle('Planets');
   }
 
   function handleStarships() {
     navigate('/starships');
-    document.title = 'Star Wars | Starships';
+    geraDocumentTitle('Starships');
   }
 
   function handleVehicles() {
     navigate('/vehicles');
-    document.title = 'Star Wars | Vehicles';
+    geraDocumentTitle('Vehicles');
   }
 
   function handleGitHub() {
