@@ -30,6 +30,8 @@ function Vehicle() {
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
+  document.title = 'Star Wars | Vehicles';
+
   const getData = useCallback(async () => {
     try {
       const response = await swapi.get(`vehicles/?page=${page}`);

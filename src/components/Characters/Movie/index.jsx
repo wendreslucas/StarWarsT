@@ -25,6 +25,8 @@ function Movie() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  document.title = 'Star Wars | Movies';
+
   const getData = useCallback(async () => {
     try {
       const response = await swapi.get('/films/');

@@ -29,6 +29,8 @@ function Planet() {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(2);
 
+  document.title = 'Star Wars | Planets';
+
   const getData = useCallback(async () => {
     try {
       const response = await swapi.get(`/planets/?page=${page}`);

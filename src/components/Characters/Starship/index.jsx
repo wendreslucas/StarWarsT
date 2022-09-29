@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-
 import { getUrlId } from '../../../utils/getUrlId';
 import { swapi } from '../../../services/api';
 import { RiLoader2Line } from 'react-icons/ri';
@@ -27,6 +26,8 @@ import {
 function Starship() {
   const [starships, setStarships] = useState();
   const [isLoading, setIsLoading] = useState(true);
+
+  document.title = 'Star Wars | Starships';
 
   const getData = useCallback(async () => {
     try {
