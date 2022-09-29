@@ -27,8 +27,6 @@ function Starship() {
   const [starships, setStarships] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-  document.title = 'Star Wars | Starships';
-
   const getData = useCallback(async () => {
     try {
       const response = await swapi.get('/starships/');

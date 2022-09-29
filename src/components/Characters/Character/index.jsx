@@ -30,8 +30,6 @@ function Character() {
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
-  document.title = 'Star Wars | Characters';
-
   const getData = useCallback(async () => {
     try {
       const response = await swapi.get(`people/?page=${page}`);
