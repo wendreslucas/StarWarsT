@@ -21,6 +21,7 @@ import {
   LikeIcon,
   CardInfo,
   ListInfo,
+  Tab,
 } from './styles';
 
 function Starship() {
@@ -46,6 +47,7 @@ function Starship() {
 
   return (
     <>
+      <Tab>STARSHIPS</Tab>
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />

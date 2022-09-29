@@ -7,7 +7,7 @@ export function MenuContextProvider({ children }) {
   const navigate = useNavigate();
 
   function handleMovies() {
-    navigate('/movies');
+    navigate('/');
   }
 
   function handlePersons() {

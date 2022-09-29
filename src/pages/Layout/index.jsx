@@ -37,7 +37,7 @@ function Layout() {
         <ContainerMain>
           <ContainerProfile>
             <ContainerFeed>
-              <Tab>FEED</Tab>
+              {/* <Tab>FEED</Tab> */}
               <Content>
                 <Outlet />
               </Content>

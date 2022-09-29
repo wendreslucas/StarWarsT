@@ -17,13 +17,13 @@ import {
   Status,
   CommentIcon,
   RetweetIcon,
-  LikeIcon
+  LikeIcon,
+  Tab,
 } from './styles';
 
 function Movie() {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
 
   const getData = useCallback(async () => {
     try {
@@ -31,9 +31,7 @@ function Movie() {
       const returnedData = await response.data;
 
       setMovies(returnedData.results);
-    
     } catch {
-      
     } finally {
       setIsLoading(false);
     }
@@ -46,7 +44,7 @@ function Movie() {
 
   return (
     <>
-   
+      <Tab>MOVIES</Tab>
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />

@@ -188,3 +188,24 @@ export const ListInfo = styled.div`
     }
   }
 `;
+
+//////////////////////////////////////
+export const Tab = styled.div`
+  text-align: center;
+  margin-top: 10px;
+  padding: 11px 0 15px;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  outline: 0;
+  cursor: pointer;
+
+  color: var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    background: var(--twitter-dark-hover);
+  }
+`;

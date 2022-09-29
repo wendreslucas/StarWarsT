@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { getUrlId } from '../../../utils/getUrlId';
 import { swapi } from '../../../services/api';
 import { RiLoader2Line } from 'react-icons/ri';
-import {TbNumber1, TbNumber2, TbNumber3} from 'react-icons/tb';
+import { TbNumber1, TbNumber2, TbNumber3 } from 'react-icons/tb';
 import {
   Container,
   Body,
@@ -21,12 +21,13 @@ import {
   CardInfo,
   ListInfo,
   Pagination,
-  PaginationButton
+  PaginationButton,
+  Tab,
 } from './styles';
 
 function Character() {
   const [characters, setCharacters] = useState();
-  const [page, setPage] = useState(1)
+  const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = useCallback(async () => {
@@ -35,7 +36,6 @@ function Character() {
       const returnedData = await response.data;
 
       setCharacters(returnedData.results);
-     
     } catch {
     } finally {
       setIsLoading(false);
@@ -49,59 +49,52 @@ function Character() {
 
   return (
     <>
-<Pagination>
-  {/* {page === 1 ? (
+      <Tab>CHARACTERS</Tab>
+      <Pagination>
+        {/* {page === 1 ? (
     <div/>
   ) : (
     <PaginationButton onClick={() => setPage(page - 1)}>Anterior</PaginationButton>
   )} */}
-  {page < 3 ? (
-    <>
-    <PaginationButton
-      isActive={page ===1}
-      onClick={() => setPage(1)}
-    >
-    <TbNumber1/>
-      </PaginationButton>
-    <PaginationButton
-      isActive={page ===2}
-      onClick={() => setPage(2)}
-      >
-    <TbNumber2/>
-    </PaginationButton>
-    <PaginationButton
-      isActive={page ===3}
-      onClick={() => setPage(3)}
-      >
-    <TbNumber3/>
-    </PaginationButton>
-    </>
-  ) : (
-    <>
-    <PaginationButton onClick={() => setPage(page -1 )}>
-    {page - 1}
-    </PaginationButton>
-    <PaginationButton isActive>{page}</PaginationButton>    
-      {characters?.next && (
-        <PaginationButton onClick={() => setPage(page + 1)}>
-          {page + 1}
-        </PaginationButton>
-      )}   
-    </>    
-  )}
+        {page < 3 ? (
+          <>
+            <PaginationButton isActive={page === 1} onClick={() => setPage(1)}>
+              <TbNumber1 />
+            </PaginationButton>
+            <PaginationButton isActive={page === 2} onClick={() => setPage(2)}>
+              <TbNumber2 />
+            </PaginationButton>
+            <PaginationButton isActive={page === 3} onClick={() => setPage(3)}>
+              <TbNumber3 />
+            </PaginationButton>
+          </>
+        ) : (
+          <>
+            <PaginationButton onClick={() => setPage(page - 1)}>
+              {page - 1}
+            </PaginationButton>
+            <PaginationButton isActive>{page}</PaginationButton>
+            {characters?.next && (
+              <PaginationButton onClick={() => setPage(page + 1)}>
+                {page + 1}
+              </PaginationButton>
+            )}
+          </>
+        )}
 
-  {!characters?.next ? (
-    <div/>
-  ) : (
-    <PaginationButton onClick={() => setPage(page + 1)}>Próximo</PaginationButton>
-  )}
-</Pagination>
+        {!characters?.next ? (
+          <div />
+        ) : (
+          <PaginationButton onClick={() => setPage(page + 1)}>
+            Próximo
+          </PaginationButton>
+        )}
+      </Pagination>
       {isLoading ? (
         <LoadingDiv>
           <RiLoader2Line />
         </LoadingDiv>
       ) : (
-        
         <div>
           {characters?.map((character, index) => (
             <Container>
