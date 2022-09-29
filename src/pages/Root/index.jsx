@@ -11,7 +11,7 @@ export const Root = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route path="/movies" element={<Movie />} />
+        <Route path="/" element={<Movie />} />
         <Route path="/characters" element={<Character />} />
         <Route path="/planets" element={<Planet />} />
         <Route path="/starships" element={<Starship />} />
