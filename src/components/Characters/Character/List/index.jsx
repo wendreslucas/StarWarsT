@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { LoadingDiv } from './styles';
 import { RiLoader2Line } from 'react-icons/ri';
 import CharacterCard from '../Card';
-import Modal from '../../../../styles/Modal';
+import CharacterModal from '../Modal';
 
 const ListCharacters = ({ loading, characters, error }) => {
   const [characterId, setCharacterId] = useState(null);
@@ -31,12 +31,10 @@ const ListCharacters = ({ loading, characters, error }) => {
           onClickCard={() => setCharacterId(character.name)}
         />
       ))}
-      <Modal
-        isOpen={Boolean(characterId)}
+      <CharacterModal
+        characterId={characterId}
         onClickClose={() => setCharacterId(null)}
-      >
-        <h1>Detalhes</h1>
-      </Modal>
+      />
     </div>
   );
 };
