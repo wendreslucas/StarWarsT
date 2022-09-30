@@ -19,7 +19,11 @@ import {
 import { RiLoader2Line } from 'react-icons/ri';
 import { getUrlId } from '../../../../utils/getUrlId';
 
-const ListCharacters = ({ loading, characters }) => {
+const ListCharacters = ({ loading, characters, error }) => {
+  if (error) {
+    return <div>Algo de errado não está certo...</div>;
+  }
+
   if (loading || characters === null) {
     return (
       <LoadingDiv>

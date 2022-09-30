@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import useDebouncedPromise from './useDebouncedPromise';
 
 const initialRequestInfo = {
   error: null,
@@ -9,18 +10,35 @@ const initialRequestInfo = {
 
 export default function useApi(config) {
   const [requestInfo, setRequestInfo] = useState(initialRequestInfo);
+  const debouncedAxios = useDebouncedPromise(axios, config.debounceDelay);
 
-  async function call() {
+  async function call(localConfig) {
     setRequestInfo({
       ...initialRequestInfo,
       loading: true,
     });
-    const response = await axios(config);
+    let response = null;
 
-    setRequestInfo({
-      ...initialRequestInfo,
-      data: response.data.results,
-    });
+    const finalConfig = {
+      baseURL: 'https://swapi.dev/api/',
+      ...config,
+      ...localConfig,
+    };
+
+    const fn = finalConfig.debounced ? debouncedAxios : axios;
+    try {
+      response = await fn(finalConfig);
+      setRequestInfo({
+        ...initialRequestInfo,
+        data: response.data.results,
+      });
+    } catch (error) {
+      setRequestInfo({
+        ...initialRequestInfo,
+        error,
+      });
+    }
+
     if (config.onCompleted) {
       config.onCompleted(response);
     }
