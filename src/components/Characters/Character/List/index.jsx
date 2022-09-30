@@ -5,7 +5,7 @@ import CharacterCard from '../Card';
 import CharacterModal from '../Modal';
 
 const ListCharacters = ({ loading, characters, error }) => {
-  const [characterId, setCharacterId] = useState(null);
+  const [characterName, setCharacterName] = useState(null);
 
   if (error) {
     return <div>Algo de errado não está certo...</div>;
@@ -28,13 +28,15 @@ const ListCharacters = ({ loading, characters, error }) => {
       {characters.map((character) => (
         <CharacterCard
           character={character}
-          onClickCard={() => setCharacterId(character.name)}
+          onClickCard={() => setCharacterName(character.name)}
         />
       ))}
-      <CharacterModal
-        characterId={characterId}
-        onClickClose={() => setCharacterId(null)}
-      />
+      {characterName && (
+        <CharacterModal
+          characterName={characterName}
+          onClickClose={() => setCharacterName(null)}
+        />
+      )}
     </div>
   );
 };

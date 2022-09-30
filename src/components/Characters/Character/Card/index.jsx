@@ -23,11 +23,12 @@ const CharacterCard = ({ character, onClickCard }) => {
       <Body>
         <Content>
           <Avatar
-            id={character}
+            id={character.id}
             src={`https://starwars-visualguide.com/assets/img/characters/${getUrlId(
               character.url
             )}.jpg`}
           />
+
           <Header>
             <strong>{character.name}</strong>
             <Dot />
@@ -66,7 +67,7 @@ const CharacterCard = ({ character, onClickCard }) => {
               </p>
 
               <p>
-                Cor do cabelo: <span>{character.hair_color}</span>
+                Cor do cabelo: <span>{character._id}</span>
               </p>
             </ListInfo>
           </CardInfo>
