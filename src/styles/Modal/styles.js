@@ -19,4 +19,11 @@ export const CloseButton = styled.button`
   float: right;
   background: unset;
   border: unset;
+
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
