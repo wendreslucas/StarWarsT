@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Container,
   Body,
@@ -18,8 +19,10 @@ import {
 } from './styles';
 import { RiLoader2Line } from 'react-icons/ri';
 import { getUrlId } from '../../../../utils/getUrlId';
+import Modal from '../../../../styles/Modal';
 
 const ListCharacters = ({ loading, characters, error }) => {
+  const [characterId, setCharacterId] = useState(null);
   if (error) {
     return <div>Algo de errado não está certo...</div>;
   }
@@ -39,7 +42,7 @@ const ListCharacters = ({ loading, characters, error }) => {
   return (
     <div>
       {characters.map((character) => (
-        <Container>
+        <Container onClickContent={() => setCharacterId(character.id)}>
           <Body>
             <Content>
               <Avatar
@@ -90,7 +93,7 @@ const ListCharacters = ({ loading, characters, error }) => {
                   </p>
                 </ListInfo>
               </CardInfo>
-              <Icons>
+              {/* <Icons>
                 <Status>
                   <CommentIcon />
                 </Status>
@@ -100,11 +103,14 @@ const ListCharacters = ({ loading, characters, error }) => {
                 <Status>
                   <LikeIcon />
                 </Status>
-              </Icons>
+              </Icons> */}
             </Content>
           </Body>
         </Container>
       ))}
+      <Modal isOpen={Boolean(characterId)}>
+        <h1>Detalhes</h1>
+      </Modal>
     </div>
   );
 };
